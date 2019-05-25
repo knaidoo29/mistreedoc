@@ -175,8 +175,23 @@ compiled correctly you should see a message of the form:</p>
 <span class="s1">&#39;fortran file N&#39;</span> <span class="o">...</span> <span class="n">Yes</span>
 </pre></div>
 </div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>If <cite>f2py</cite> cannot find a <a class="reference external" href="https://gcc.gnu.org/">gcc</a> compiler then the fortran
+modules will not compile. If you have this issue and are using an anaconda distribution
+of python then you should be able to install <cite>gcc</cite> directly using the commands:</p>
+<p class="last"><cite>conda install -c anaconda gcc</cite></p>
+</div>
 <p>Assuming these compile correctly you will then need to add the MiSTree directory
-to your python path. Once this is done you should be able to call MiSTree from python:</p>
+to your python path.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>If you’re using a mac you would add this to your <cite>.bash_profile</cite> file (a hidden file
+located in your home folder):</p>
+<p><cite>export PYTHONPATH=$PYTHONPATH:&lt;path/to/mistree&gt;</cite></p>
+<p class="last">Then run <cite>source .bash_profile</cite>.</p>
+</div>
+<p>Once this is done you should be able to call MiSTree from python:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">mistree</span> <span class="kn">as</span> <span class="nn">mist</span>
 </pre></div>
 </div>

@@ -30,8 +30,25 @@ compiled correctly you should see a message of the form::
     ...
    'fortran file N' ... Yes
 
+.. note::
+    If `f2py` cannot find a `gcc <https://gcc.gnu.org/>`_ compiler then the fortran
+    modules will not compile. If you have this issue and are using an anaconda distribution
+    of python then you should be able to install `gcc` directly using the commands:
+
+    `conda install -c anaconda gcc`
+
 Assuming these compile correctly you will then need to add the MiSTree directory
-to your python path. Once this is done you should be able to call MiSTree from python:
+to your python path.
+
+.. note::
+    If you're using a mac you would add this to your `.bash_profile` file (a hidden file
+    located in your home folder):
+
+    `export PYTHONPATH=$PYTHONPATH:<path/to/mistree>`
+
+    Then run `source .bash_profile`.
+
+Once this is done you should be able to call MiSTree from python:
 
 .. code-block:: python
 
