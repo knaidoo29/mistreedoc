@@ -17,9 +17,9 @@ that it will work for Python 3. You will need the following python modules:
 * `scikit-learn <http://scikit-learn.org/stable/>`_
 * `f2py <https://docs.scipy.org/doc/numpy/f2py/>`_ (should be installed with numpy)
 
-If 'f2py` cannot find a 'gcc` compiler then the fortran modules will not compile.
+If ``f2py`` cannot find a ``gcc`` compiler then the fortran modules will not compile.
 If you have this issue and are using an anaconda distribution of python then you
-should be able to install 'gcc` directly using the commands:
+should be able to install ``gcc`` directly using the commands::
 
     conda install -c anaconda gcc
 
@@ -44,12 +44,12 @@ Assuming these compile correctly you will then need to add the MiSTree directory
 to your python path.
 
 .. note::
-    If you're using a mac you would add this to your '.bash_profile` file (a hidden file
+    If you're using a mac you would add this to your ``.bash_profile`` file (a hidden file
     located in your home folder):
 
-    'export PYTHONPATH=$PYTHONPATH:<path/to/mistree>`
+    ``export PYTHONPATH=$PYTHONPATH:<path/to/mistree>``
 
-    Then run 'source .bash_profile`.
+    Then run ``source .bash_profile``.
 
 Once this is done you should be able to call MiSTree from python:
 

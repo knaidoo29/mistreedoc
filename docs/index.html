@@ -163,11 +163,12 @@ that it will work for Python 3. You will need the following python modules:</p>
 <li><a class="reference external" href="http://scikit-learn.org/stable/">scikit-learn</a></li>
 <li><a class="reference external" href="https://docs.scipy.org/doc/numpy/f2py/">f2py</a> (should be installed with numpy)</li>
 </ul>
-<p>If ‘f2py` cannot find a ‘gcc` compiler then the fortran modules will not compile.
+<p>If <code class="docutils literal notranslate"><span class="pre">f2py</span></code> cannot find a <code class="docutils literal notranslate"><span class="pre">gcc</span></code> compiler then the fortran modules will not compile.
 If you have this issue and are using an anaconda distribution of python then you
-should be able to install ‘gcc` directly using the commands:</p>
-<blockquote>
-<div>conda install -c anaconda gcc</div></blockquote>
+should be able to install <code class="docutils literal notranslate"><span class="pre">gcc</span></code> directly using the commands:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">anaconda</span> <span class="n">gcc</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
@@ -188,10 +189,10 @@ compiled correctly you should see a message of the form:</p>
 to your python path.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p>If you’re using a mac you would add this to your ‘.bash_profile` file (a hidden file
+<p>If you’re using a mac you would add this to your <code class="docutils literal notranslate"><span class="pre">.bash_profile</span></code> file (a hidden file
 located in your home folder):</p>
-<p>‘export PYTHONPATH=$PYTHONPATH:&lt;path/to/mistree&gt;`</p>
-<p class="last">Then run ‘source .bash_profile`.</p>
+<p><code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">PYTHONPATH=$PYTHONPATH:&lt;path/to/mistree&gt;</span></code></p>
+<p class="last">Then run <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">.bash_profile</span></code>.</p>
 </div>
 <p>Once this is done you should be able to call MiSTree from python:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">mistree</span> <span class="kn">as</span> <span class="nn">mist</span>
