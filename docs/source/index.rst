@@ -6,19 +6,36 @@ MiSTree is designed with the intent of being an easy to use minimum spanning tre
 library. MiSTree is free to use, if you do use MiSTree in a publication,
 please cite the paper **ref**.
 
-Installation
+Dependencies
 ------------
 
-To use MiSTree you must first download the package from `github
-<https://github.com/knaidoo29/mistree>`_. The package itself requires the
-following python libraries:
+MiSTree was tested and built using Python 2.7, for the moment so we cannot guarantee
+that it will work for Python 3. You will need the following python modules:
 
 * `numpy <http://www.numpy.org/>`_
 * `scipy <https://scipy.org/>`_
 * `scikit-learn <http://scikit-learn.org/stable/>`_
 * `f2py <https://docs.scipy.org/doc/numpy/f2py/>`_ (should be installed with numpy)
 
-Using a terminal go into the MiSTree directory and run::
+If `f2py` cannot find a `gcc` compiler then the fortran modules will not compile.
+If you have this issue and are using an anaconda distribution of python then you
+should be able to install `gcc` directly using the commands:
+
+    `conda install -c anaconda gcc`
+
+Installation
+------------
+
+The package itself requires the following python libraries:
+
+* `numpy <http://www.numpy.org/>`_
+* `scipy <https://scipy.org/>`_
+* `scikit-learn <http://scikit-learn.org/stable/>`_
+* `f2py <https://docs.scipy.org/doc/numpy/f2py/>`_ (should be installed with numpy)
+
+To use MiSTree you must first download the package from `github
+<https://github.com/knaidoo29/mistree>`_. Using a terminal go into the MiSTree
+directory and run::
 
    python setup.py
 
@@ -29,13 +46,6 @@ compiled correctly you should see a message of the form::
    'fortran file 1' ... Yes
     ...
    'fortran file N' ... Yes
-
-.. note::
-    If `f2py` cannot find a `gcc <https://gcc.gnu.org/>`_ compiler then the fortran
-    modules will not compile. If you have this issue and are using an anaconda distribution
-    of python then you should be able to install `gcc` directly using the commands:
-
-    `conda install -c anaconda gcc`
 
 Assuming these compile correctly you will then need to add the MiSTree directory
 to your python path.
@@ -53,9 +63,6 @@ Once this is done you should be able to call MiSTree from python:
 .. code-block:: python
 
    import mistree as mist
-
-Note: MiSTree was tested and built using python 2.7, compatibility with python 3 is something we are
-aiming for in the near future.
 
 Contents
 --------
