@@ -163,21 +163,14 @@ that it will work for Python 3. You will need the following python modules:</p>
 <li><a class="reference external" href="http://scikit-learn.org/stable/">scikit-learn</a></li>
 <li><a class="reference external" href="https://docs.scipy.org/doc/numpy/f2py/">f2py</a> (should be installed with numpy)</li>
 </ul>
-<p>If <cite>f2py</cite> cannot find a <cite>gcc</cite> compiler then the fortran modules will not compile.
+<p>If ‘f2py` cannot find a ‘gcc` compiler then the fortran modules will not compile.
 If you have this issue and are using an anaconda distribution of python then you
-should be able to install <cite>gcc</cite> directly using the commands:</p>
+should be able to install ‘gcc` directly using the commands:</p>
 <blockquote>
-<div><cite>conda install -c anaconda gcc</cite></div></blockquote>
+<div>conda install -c anaconda gcc</div></blockquote>
 </div>
 <div class="section" id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
-<p>The package itself requires the following python libraries:</p>
-<ul class="simple">
-<li><a class="reference external" href="http://www.numpy.org/">numpy</a></li>
-<li><a class="reference external" href="https://scipy.org/">scipy</a></li>
-<li><a class="reference external" href="http://scikit-learn.org/stable/">scikit-learn</a></li>
-<li><a class="reference external" href="https://docs.scipy.org/doc/numpy/f2py/">f2py</a> (should be installed with numpy)</li>
-</ul>
 <p>To use MiSTree you must first download the package from <a class="reference external" href="https://github.com/knaidoo29/mistree">github</a>. Using a terminal go into the MiSTree
 directory and run:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span>
@@ -195,10 +188,10 @@ compiled correctly you should see a message of the form:</p>
 to your python path.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p>If you’re using a mac you would add this to your <cite>.bash_profile</cite> file (a hidden file
+<p>If you’re using a mac you would add this to your ‘.bash_profile` file (a hidden file
 located in your home folder):</p>
-<p><cite>export PYTHONPATH=$PYTHONPATH:&lt;path/to/mistree&gt;</cite></p>
-<p class="last">Then run <cite>source .bash_profile</cite>.</p>
+<p>‘export PYTHONPATH=$PYTHONPATH:&lt;path/to/mistree&gt;`</p>
+<p class="last">Then run ‘source .bash_profile`.</p>
 </div>
 <p>Once this is done you should be able to call MiSTree from python:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">mistree</span> <span class="kn">as</span> <span class="nn">mist</span>
