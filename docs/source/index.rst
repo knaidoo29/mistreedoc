@@ -9,8 +9,7 @@ please cite the paper **ref**.
 Dependencies
 ------------
 
-MiSTree was tested and built using Python 2.7, for the moment so we cannot guarantee
-that it will work for Python 3. You will need the following python modules:
+You will need the following python modules:
 
 * `numpy <http://www.numpy.org/>`_
 * `scipy <https://scipy.org/>`_
@@ -22,6 +21,10 @@ If you have this issue and are using an anaconda distribution of python then you
 should be able to install ``gcc`` directly using the commands::
 
     conda install -c anaconda gcc
+
+.. note::
+    MiSTree was tested and built using Python 2.7, for the moment so we cannot
+    guarantee that it will work for Python 3.
 
 Installation
 ------------
