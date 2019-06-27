@@ -169,7 +169,7 @@
 <h1>GetMST<a class="headerlink" href="#getmst" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="GetMST">
-<em class="property">class </em><code class="descname">GetMST</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>z</em>, <em>ra</em>, <em>dec</em>, <em>r</em><span class="optional">[</span>, <em>units='degree'</em>, <em>do_prints=False</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#GetMST" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descname">GetMST</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>z</em>, <em>phi</em>, <em>theta</em>, <em>ra</em>, <em>dec</em>, <em>r</em><span class="optional">[</span>, <em>units='degree'</em>, <em>do_prints=False</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#GetMST" title="Permalink to this definition">¶</a></dt>
 <dd><p>A class for constructing and analysing the minimum spanning tree (MST). Input the node positions
 of a given data set to initiate the class.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -180,6 +180,8 @@ of a given data set to initiate the class.</p>
 <li><strong>x</strong> (<em>array</em>) – Cartesian coordinates.</li>
 <li><strong>y</strong> (<em>array</em>) – Cartesian coordinates.</li>
 <li><strong>z</strong> (<em>array</em>) – Cartesian coordinates.</li>
+<li><strong>phi</strong> (<em>array</em>) – Longitude coordinates.</li>
+<li><strong>theta</strong> (<em>array</em>) – Latitude coordinates.</li>
 <li><strong>ra</strong> (<em>array</em>) – Celestial longitude coordinates.</li>
 <li><strong>dec</strong> (<em>array</em>) – Celestial latitude coordinates.</li>
 <li><strong>r</strong> (<em>array</em>) – Radial distance.</li>
@@ -197,8 +199,10 @@ of a given data set to initiate the class.</p>
 <ul class="last simple">
 <li>x and y - for 2D cartesian coordinate. <code class="docutils literal notranslate"><span class="pre">_mode='2D'</span></code></li>
 <li>x, y and z - for 3D cartesian coordinates.  <code class="docutils literal notranslate"><span class="pre">_mode='3D'</span></code></li>
-<li>ra and dec - for celestial coordinates. <code class="docutils literal notranslate"><span class="pre">_mode='tomographic'</span></code></li>
-<li>ra, dec and r - for spherical polar coordinates. <code class="docutils literal notranslate"><span class="pre">_mode='spherical</span> <span class="pre">polar'</span></code></li>
+<li>phi and theta - for tomographic coordinates. <code class="docutils literal notranslate"><span class="pre">_mode='tomographic'</span></code></li>
+<li>phi, theta and r - for spherical polar coordinates. <code class="docutils literal notranslate"><span class="pre">_mode='spherical</span> <span class="pre">polar'</span></code></li>
+<li>ra and dec - for celestial coordinates. <code class="docutils literal notranslate"><span class="pre">_mode='tomographic</span> <span class="pre">celestial'</span></code></li>
+<li>ra, dec and r - for spherical celestial polar coordinates. <code class="docutils literal notranslate"><span class="pre">_mode='spherical</span> <span class="pre">polar</span> <span class="pre">celestial'</span></code></li>
 </ul>
 </div>
 <dl class="function">

@@ -24,20 +24,20 @@ To initiate the class we will run:
     # For 3D
     mst = mist.GetMST(x=x, y=y, z=z)
 
+    # For tomographic coordinates
+    mst = mist.GetMST(phi=phi, theta=theta)
+
     # For tomographic celestial coordinates
     mst = mist.GetMST(ra=ra, dec=dec)
 
-    # For spherical polar coordinates (celestial coordinates + distance)
+    # For spherical polar coordinates
+    mst = mist.GetMST(phi=phi, theta=theta, r=r)
+
+    # For spherical celestial polar coordinates
     mst = mist.GetMST(ra=ra, dec=dec, r=r)
 
-To construct the MST we then run:
-
-.. code-block:: python
-
-    mst.construct_mst()
-
-And to output the MST statistics: degree (d), edge length (l), branch length (b)
-and branch shape (s):
+And to construct the MST and output the MST statistics: degree (d), edge length (l),
+branch length (b) and branch shape (s):
 
 .. code-block:: python
 
@@ -182,55 +182,6 @@ the following:
 
     mst = mist.GetMST(x=x, y=y)
     d, l, b, s = mst.get_stats(scale_cut_length=0.002)
-
-Scale cut + Partitions
-^^^^^^^^^^^^^^^^^^^^^^
-
-Often a large scale cut will cause quite a significant impact on the MST statistics,
-particularly in terms of the degree and branch shape. In these circumstances it is often
-better to first partition the data set and then apply a scale cut. Fortunately, this is
-rather easy to implement.
-
-Let's first begin by generating 100000 random 2D points between 0 and 1.
-
-.. code-block:: python
-
-    x = np.random.random_sample(100000)
-    y = np.random.random_sample(100000)
-
-
-Now let's apply quite an aggressive scale cut of 0.002 which forms a significant fraction
-of the original MST edges.
-
-.. code-block:: python
-
-    # MST no scale cut or partition.
-    mst = mist.GetMST(x=x, y=y)
-    d, l, b, s = mst.get_stats()
-
-    # MST with an aggresive scale cut length of 0.002
-    mst = mist.GetMST(x=x, y=y)
-    d2, l2, b2, s2 = mst.get_stats(scale_cut_length=0.002)
-
-There is a significant difference between the original statistics and the scale cut
-statistics. This is especially pronounced in the distributions of degree and branch shape. To
-minimize this we can partition the data, as such making the mean separation between points larger
-and thus limiting the number of edges which need to be removed from the analysis. We can perform
-this in the following way:
-
-.. code-block:: python
-
-    # MST using 4 partitions applied
-    mst = mist.GetMST(x=x, y=y)
-    d3, l3, b3, s3 = mst.get_stats(partitions=4)
-
-    # MST using 4 partitions and a scale cut length of 0.002
-    mst = mist.GetMST(x=x, y=y)
-    d4, l4, b4, s4 = mst.get_stats(scale_cut_length=0.002, partitions=4)
-
-.. image:: img/group_scale_cut_stats_split.png
-    :scale: 50 %
-    :align: center
 
 Functions
 =========

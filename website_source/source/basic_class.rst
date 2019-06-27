@@ -2,7 +2,7 @@
 GetMST
 ======
 
-.. class:: GetMST(x, y, z, ra, dec, r[, units='degree', do_prints=False])
+.. class:: GetMST(x, y, z, phi, theta, ra, dec, r[, units='degree', do_prints=False])
 
     A class for constructing and analysing the minimum spanning tree (MST). Input the node positions
     of a given data set to initiate the class.
@@ -13,6 +13,10 @@ GetMST
     :type y: array
     :param z: Cartesian coordinates.
     :type z: array
+    :param phi: Longitude coordinates.
+    :type phi: array
+    :param theta: Latitude coordinates.
+    :type theta: array
     :param ra: Celestial longitude coordinates.
     :type ra: array
     :param dec: Celestial latitude coordinates.
@@ -31,8 +35,10 @@ GetMST
 
         * x and y - for 2D cartesian coordinate. ``_mode='2D'``
         * x, y and z - for 3D cartesian coordinates.  ``_mode='3D'``
-        * ra and dec - for celestial coordinates. ``_mode='tomographic'``
-        * ra, dec and r - for spherical polar coordinates. ``_mode='spherical polar'``
+        * phi and theta - for tomographic coordinates. ``_mode='tomographic'``
+        * phi, theta and r - for spherical polar coordinates. ``_mode='spherical polar'``
+        * ra and dec - for celestial coordinates. ``_mode='tomographic celestial'``
+        * ra, dec and r - for spherical celestial polar coordinates. ``_mode='spherical polar celestial'``
 
     .. function:: define_k_neighbours(k_neighbours)
 

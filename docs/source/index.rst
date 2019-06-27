@@ -23,8 +23,8 @@ should be able to install ``gcc`` directly using the commands::
     conda install -c anaconda gcc
 
 .. note::
-    MiSTree was tested and built using Python 2.7, so for the moment we cannot
-    guarantee that it will work for Python 3.
+    MiSTree was tested and built using Python 2.7. We are working on making this
+    compatible with Python 3.
 
 Installation
 ------------
@@ -97,4 +97,3 @@ If you have any issues with the code or would like to suggest ways of improving
 it, feel free to e-mail:
 
 - krishna.naidoo.11@ucl.ac.uk
-- lorne.whiteway.13@ucl.ac.uk

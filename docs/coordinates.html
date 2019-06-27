@@ -168,9 +168,32 @@
   <div class="section" id="coordinate-utility">
 <h1>coordinate_utility<a class="headerlink" href="#coordinate-utility" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
+<dt id="spherical_2_cartesian">
+<code class="descname">spherical_2_cartesian</code><span class="sig-paren">(</span><em>r</em>, <em>phi</em>, <em>theta</em><span class="optional">[</span>, <em>units='degree'</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#spherical_2_cartesian" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts spherical polar coordinates into cartesian coordinates.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>r</strong> (<em>array</em>) – Radial distance.</li>
+<li><strong>phi</strong> (<em>array</em>) – Longitudinal coordinates.</li>
+<li><strong>theta</strong> (<em>array</em>) – Latitude coordinates.</li>
+<li><strong>units</strong> (<em>str</em>) – Units of <code class="docutils literal notranslate"><span class="pre">phi</span></code> and <code class="docutils literal notranslate"><span class="pre">theta</span></code> given in either ‘degrees’ or ‘radians’.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>x, y, z</strong> <em>(array)</em> : cartesian coordinates.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
 <dt id="celestial_2_cartesian">
 <code class="descname">celestial_2_cartesian</code><span class="sig-paren">(</span><em>r</em>, <em>ra</em>, <em>dec</em><span class="optional">[</span>, <em>units='degree'</em>, <em>output='both'</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#celestial_2_cartesian" title="Permalink to this definition">¶</a></dt>
-<dd><p>Converts spherical polar coordinates into cartesian coordinates.</p>
+<dd><p>Converts celestial spherical polar coordinates into cartesian coordinates.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -187,7 +210,7 @@
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p>Returns tuple of either:</p>
 <ul class="simple">
 <li><strong>phi, theta</strong> <em>(array)</em> – ‘spherical’: spherical polar coordinates.</li>
-<li><strong>x, y, z</strong> <em>(array)</em> – ‘euclidean’: euclidean coordinates.</li>
+<li><strong>x, y, z</strong> <em>(array)</em> – ‘cartesian’: cartesian coordinates.</li>
 </ul>
 </p>
 </td>
@@ -197,9 +220,32 @@
 </dd></dl>
 
 <dl class="function">
+<dt id="spherical_2_unit_sphere">
+<code class="descname">spherical_2_unit_sphere</code><span class="sig-paren">(</span><em>phi</em>, <em>theta</em><span class="optional">[</span>, <em>units='degrees'</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#spherical_2_unit_sphere" title="Permalink to this definition">¶</a></dt>
+<dd><p>Project coordinates on a sphere into cartesian coordinates on a unit sphere.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>r</strong> (<em>array</em>) – Radial distance.</li>
+<li><strong>phi</strong> (<em>array</em>) – Longitudinal coordinates.</li>
+<li><strong>theta</strong> (<em>array</em>) – Latitude coordinates.</li>
+<li><strong>units</strong> (<em>str</em>) – Units of <code class="docutils literal notranslate"><span class="pre">ra</span></code> and <code class="docutils literal notranslate"><span class="pre">dec</span></code> given in either ‘degrees’ or ‘radians’.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>x, y, z</strong> <em>(array)</em> : cartesian coordinates.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
 <dt id="celestial_2_unit_sphere">
 <code class="descname">celestial_2_unit_sphere</code><span class="sig-paren">(</span><em>ra</em>, <em>dec</em><span class="optional">[</span>, <em>units='degrees'</em>, <em>output='both'</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#celestial_2_unit_sphere" title="Permalink to this definition">¶</a></dt>
-<dd><p>Project coordinates on a sphere into cartesian coordinates on a unit sphere.</p>
+<dd><p>Project celestial coordinates on a sphere into cartesian coordinates on a unit sphere.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -216,7 +262,7 @@
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p>Returns tuple of either:</p>
 <ul class="simple">
 <li><strong>phi, theta</strong> <em>(array)</em> – ‘spherical’: spherical polar coordinates.</li>
-<li><strong>x, y, z</strong> <em>(array)</em> – ‘euclidean’: euclidean coordinates.</li>
+<li><strong>x, y, z</strong> <em>(array)</em> – ‘cartesian’: cartesian coordinates.</li>
 </ul>
 </p>
 </td>

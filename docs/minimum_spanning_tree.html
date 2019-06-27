@@ -89,7 +89,6 @@
 <li class="toctree-l3"><a class="reference internal" href="#advance-usage">Advance Usage</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#k-nearest-neighbours">k Nearest Neighbours</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#scale-cuts">Scale Cuts</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#scale-cut-partitions">Scale cut + Partitions</a></li>
 </ul>
 </li>
 </ul>
@@ -190,19 +189,21 @@ with the MST you will not need to use the internal functions that are used by th
 <span class="c1"># For 3D</span>
 <span class="n">mst</span> <span class="o">=</span> <span class="n">mist</span><span class="o">.</span><span class="n">GetMST</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="n">z</span><span class="p">)</span>
 
+<span class="c1"># For tomographic coordinates</span>
+<span class="n">mst</span> <span class="o">=</span> <span class="n">mist</span><span class="o">.</span><span class="n">GetMST</span><span class="p">(</span><span class="n">phi</span><span class="o">=</span><span class="n">phi</span><span class="p">,</span> <span class="n">theta</span><span class="o">=</span><span class="n">theta</span><span class="p">)</span>
+
 <span class="c1"># For tomographic celestial coordinates</span>
 <span class="n">mst</span> <span class="o">=</span> <span class="n">mist</span><span class="o">.</span><span class="n">GetMST</span><span class="p">(</span><span class="n">ra</span><span class="o">=</span><span class="n">ra</span><span class="p">,</span> <span class="n">dec</span><span class="o">=</span><span class="n">dec</span><span class="p">)</span>
 
-<span class="c1"># For spherical polar coordinates (celestial coordinates + distance)</span>
+<span class="c1"># For spherical polar coordinates</span>
+<span class="n">mst</span> <span class="o">=</span> <span class="n">mist</span><span class="o">.</span><span class="n">GetMST</span><span class="p">(</span><span class="n">phi</span><span class="o">=</span><span class="n">phi</span><span class="p">,</span> <span class="n">theta</span><span class="o">=</span><span class="n">theta</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="n">r</span><span class="p">)</span>
+
+<span class="c1"># For spherical celestial polar coordinates</span>
 <span class="n">mst</span> <span class="o">=</span> <span class="n">mist</span><span class="o">.</span><span class="n">GetMST</span><span class="p">(</span><span class="n">ra</span><span class="o">=</span><span class="n">ra</span><span class="p">,</span> <span class="n">dec</span><span class="o">=</span><span class="n">dec</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="n">r</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>To construct the MST we then run:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mst</span><span class="o">.</span><span class="n">construct_mst</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>And to output the MST statistics: degree (d), edge length (l), branch length (b)
-and branch shape (s):</p>
+<p>And to construct the MST and output the MST statistics: degree (d), edge length (l),
+branch length (b) and branch shape (s):</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="n">mst</span><span class="o">.</span><span class="n">get_stats</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -327,44 +328,6 @@ the following:</p>
 <span class="n">d</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="n">mst</span><span class="o">.</span><span class="n">get_stats</span><span class="p">(</span><span class="n">scale_cut_length</span><span class="o">=</span><span class="mf">0.002</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="scale-cut-partitions">
-<h4>Scale cut + Partitions<a class="headerlink" href="#scale-cut-partitions" title="Permalink to this headline">¶</a></h4>
-<p>Often a large scale cut will cause quite a significant impact on the MST statistics,
-particularly in terms of the degree and branch shape. In these circumstances it is often
-better to first partition the data set and then apply a scale cut. Fortunately, this is
-rather easy to implement.</p>
-<p>Let’s first begin by generating 100000 random 2D points between 0 and 1.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random_sample</span><span class="p">(</span><span class="mi">100000</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random_sample</span><span class="p">(</span><span class="mi">100000</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Now let’s apply quite an aggressive scale cut of 0.002 which forms a significant fraction
-of the original MST edges.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># MST no scale cut or partition.</span>
-<span class="n">mst</span> <span class="o">=</span> <span class="n">mist</span><span class="o">.</span><span class="n">GetMST</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">)</span>
-<span class="n">d</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="n">mst</span><span class="o">.</span><span class="n">get_stats</span><span class="p">()</span>
-
-<span class="c1"># MST with an aggresive scale cut length of 0.002</span>
-<span class="n">mst</span> <span class="o">=</span> <span class="n">mist</span><span class="o">.</span><span class="n">GetMST</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">)</span>
-<span class="n">d2</span><span class="p">,</span> <span class="n">l2</span><span class="p">,</span> <span class="n">b2</span><span class="p">,</span> <span class="n">s2</span> <span class="o">=</span> <span class="n">mst</span><span class="o">.</span><span class="n">get_stats</span><span class="p">(</span><span class="n">scale_cut_length</span><span class="o">=</span><span class="mf">0.002</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>There is a significant difference between the original statistics and the scale cut
-statistics. This is especially pronounced in the distributions of degree and branch shape. To
-minimize this we can partition the data, as such making the mean separation between points larger
-and thus limiting the number of edges which need to be removed from the analysis. We can perform
-this in the following way:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># MST using 4 partitions applied</span>
-<span class="n">mst</span> <span class="o">=</span> <span class="n">mist</span><span class="o">.</span><span class="n">GetMST</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">)</span>
-<span class="n">d3</span><span class="p">,</span> <span class="n">l3</span><span class="p">,</span> <span class="n">b3</span><span class="p">,</span> <span class="n">s3</span> <span class="o">=</span> <span class="n">mst</span><span class="o">.</span><span class="n">get_stats</span><span class="p">(</span><span class="n">partitions</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
-
-<span class="c1"># MST using 4 partitions and a scale cut length of 0.002</span>
-<span class="n">mst</span> <span class="o">=</span> <span class="n">mist</span><span class="o">.</span><span class="n">GetMST</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">)</span>
-<span class="n">d4</span><span class="p">,</span> <span class="n">l4</span><span class="p">,</span> <span class="n">b4</span><span class="p">,</span> <span class="n">s4</span> <span class="o">=</span> <span class="n">mst</span><span class="o">.</span><span class="n">get_stats</span><span class="p">(</span><span class="n">scale_cut_length</span><span class="o">=</span><span class="mf">0.002</span><span class="p">,</span> <span class="n">partitions</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
-</pre></div>
-</div>
-<a class="reference internal image-reference" href="_images/group_scale_cut_stats_split.png"><img alt="_images/group_scale_cut_stats_split.png" class="align-center" src="_images/group_scale_cut_stats_split.png" style="width: 800.0px; height: 350.0px;" /></a>
 </div>
 </div>
 </div>
