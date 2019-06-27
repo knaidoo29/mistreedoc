@@ -2,7 +2,7 @@
 GetMST
 ======
 
-.. class:: GetMST(x, y, z, phi, theta, ra, dec, r[, units='degree', do_prints=False])
+.. class:: GetMST([x=None, y=None, z=None, phi=None, theta=None, ra=None, dec=None, r=None, units='degree', do_prints=False])
 
     A class for constructing and analysing the minimum spanning tree (MST). Input the node positions
     of a given data set to initiate the class.
