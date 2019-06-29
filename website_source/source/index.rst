@@ -3,13 +3,14 @@ Introduction
 ------------
 
 MiSTree is designed with the intent of being an easy to use minimum spanning tree
-library. MiSTree is free to use, if you do use MiSTree in a publication,
-please cite the paper **ref**.
+library. The methods and statistics used in the module are discussed in the[] paper
+"Beyond two-point statistics: using the Minimum Spanning Tree as a tool for cosmology"
+which can be found here.
 
 Dependencies
 ------------
 
-You will need the following python modules:
+You will need the following python modules as well as:
 
 * `numpy <http://www.numpy.org/>`_
 * `scipy <https://scipy.org/>`_
@@ -22,9 +23,7 @@ should be able to install ``gcc`` directly using the commands::
 
     conda install -c anaconda gcc
 
-.. note::
-    MiSTree was tested and built using Python 2.7. We are working on making this
-    compatible with Python 3.
+The module has been tested on Python version 2.7, 3.5 and 3.7.
 
 Installation
 ------------
