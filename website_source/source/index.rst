@@ -3,9 +3,9 @@ Introduction
 ------------
 
 MiSTree is designed with the intent of being an easy to use minimum spanning tree
-library. The methods and statistics used in the module are discussed in the[] paper
+library. The methods and statistics used in the module are discussed in the paper
 "Beyond two-point statistics: using the Minimum Spanning Tree as a tool for cosmology"
-which can be found here.
+[ArXiv=####:#####] which can be found here <http://scikit-learn.org/stable/>`_.
 
 Dependencies
 ------------
@@ -87,7 +87,7 @@ Version History
       - Lévy flight.
       - Adjusted Lévy flight.
       - User defined random walk distribution.
-      - Done in 2D/3D and with/without periodic boundary conditions.
+      - In 2D/3D and with/without periodic boundary conditions.
 
 Support
 -------
