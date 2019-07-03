@@ -10,7 +10,7 @@ library. The methods and statistics used in the module are discussed in the pape
 Dependencies
 ------------
 
-You will need the following python modules as well as:
+You will need the following python modules:
 
 * `numpy <http://www.numpy.org/>`_
 * `scipy <https://scipy.org/>`_
