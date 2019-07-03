@@ -201,7 +201,7 @@
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>r</strong> (<em>array</em>) – Radial distance.</li>
 <li><strong>ra</strong> (<em>array</em>) – Longitudinal celestial coordinates.</li>
-<li><strong>dec</strong> (<em>array</em>) – Latitude celestial coordinates.</li>
+<li><strong>dec</strong> (<em>array</em>) – Latitudinal celestial coordinates.</li>
 <li><strong>units</strong> (<em>str</em>) – Units of <code class="docutils literal notranslate"><span class="pre">ra</span></code> and <code class="docutils literal notranslate"><span class="pre">dec</span></code> given in either ‘degrees’ or ‘radians’.</li>
 <li><strong>output</strong> (<em>str</em>) – ‘euclidean’ or ‘both’. Determines whether to output only the euclidean or both euclidean and spherical coordinates.</li>
 </ul>
@@ -222,7 +222,7 @@
 <dl class="function">
 <dt id="spherical_2_unit_sphere">
 <code class="descname">spherical_2_unit_sphere</code><span class="sig-paren">(</span><em>phi</em>, <em>theta</em><span class="optional">[</span>, <em>units='degrees'</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#spherical_2_unit_sphere" title="Permalink to this definition">¶</a></dt>
-<dd><p>Project coordinates on a sphere into cartesian coordinates on a unit sphere.</p>
+<dd><p>Project coordinates across a sphere (or on the sky) into cartesian coordinates on a unit sphere.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -230,7 +230,7 @@
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>r</strong> (<em>array</em>) – Radial distance.</li>
 <li><strong>phi</strong> (<em>array</em>) – Longitudinal coordinates.</li>
-<li><strong>theta</strong> (<em>array</em>) – Latitude coordinates.</li>
+<li><strong>theta</strong> (<em>array</em>) – Latitudinal coordinates.</li>
 <li><strong>units</strong> (<em>str</em>) – Units of <code class="docutils literal notranslate"><span class="pre">ra</span></code> and <code class="docutils literal notranslate"><span class="pre">dec</span></code> given in either ‘degrees’ or ‘radians’.</li>
 </ul>
 </td>
@@ -253,7 +253,7 @@
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>r</strong> (<em>array</em>) – Radial distance.</li>
 <li><strong>ra</strong> (<em>array</em>) – Longitudinal celestial coordinates.</li>
-<li><strong>dec</strong> (<em>array</em>) – Latitude celestial coordinates.</li>
+<li><strong>dec</strong> (<em>array</em>) – Latitudinal celestial coordinates.</li>
 <li><strong>units</strong> (<em>str</em>) – Units of <code class="docutils literal notranslate"><span class="pre">ra</span></code> and <code class="docutils literal notranslate"><span class="pre">dec</span></code> given in either ‘degrees’ or ‘radians’.</li>
 <li><strong>output</strong> (<em>str</em>) – ‘euclidean’ or ‘both’. Determines whether to output only the euclidean or both euclidean and spherical coordinates.</li>
 </ul>
@@ -274,14 +274,14 @@
 <dl class="function">
 <dt id="perpendicular_distance_2_angle">
 <code class="descname">perpendicular_distance_2_angle</code><span class="sig-paren">(</span><em>distance</em><span class="sig-paren">)</span><a class="headerlink" href="#perpendicular_distance_2_angle" title="Permalink to this definition">¶</a></dt>
-<dd><p>Converts distances on a unit sphere to angular distances projected across a unit sphere.</p>
+<dd><p>Converts distances across a unit sphere to angular distances.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>distance</strong> (<em>array</em>) – Perpendicular distances across (i.e. going on the surface) of a unit sphere.</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>distance</strong> (<em>array</em>) – Perpendicular distances across (i.e. going on the surface) a unit sphere.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>angular_distance</strong> <em>(array)</em> – The angular distance of points across a unit sphere.</td>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>angular_distance</strong> <em>(array)</em> – The angular distance between points across a unit sphere.</td>
 </tr>
 </tbody>
 </table>

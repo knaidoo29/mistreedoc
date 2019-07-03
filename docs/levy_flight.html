@@ -420,17 +420,17 @@ CDF(t) = \left\{ \begin{array}{lcl}
 \end{equation*}"/></p>
 </div><p>which we call the <em>adjusted Levy flight</em>, where <img class="math" src="_images/math/6b14519f0e48e358e3ca7f919b52bf51559f687b.png" alt="t_{0}"/> and <img class="math" src="_images/math/877d234f4cec6974ce218fc2e975a486a7972dfd.png" alt="\alpha"/>
 play the same role as they do in the normal Lévy flight distribution. The CDF
-is built of two CDFs: (1) the normal Lévy flight part which operates for step sizes
+is built with two CDFs: (1) the normal Lévy flight part which operates for step sizes
 larger than <img class="math" src="_images/math/6b14519f0e48e358e3ca7f919b52bf51559f687b.png" alt="t_{0}"/> and (2) the adjusted part operates between step sizes
 <img class="math" src="_images/math/e61059085197d493281741274e95b4ec13853cd1.png" alt="t_{s}"/> and <img class="math" src="_images/math/6b14519f0e48e358e3ca7f919b52bf51559f687b.png" alt="t_{0}"/> where <img class="math" src="_images/math/81fc952dd0be2776d13ac7c0ca923fe6ccae8f35.png" alt="t_{s} &lt; t_{0}"/>. Unlike the normal
 Lévy flight distribution, which transitions from a <img class="math" src="_images/math/0b0edca30a50ef466e22693012728ba1622eadb8.png" alt="PDF(t&lt;t_{0}) = 0"/> to a
-peak at <img class="math" src="_images/math/c68d6431775a34a75492e335d0a3551d2d2d27bf.png" alt="PDF(t_{0})"/> the adjusted Lévy flight had a gradual rise in between
+peak at <img class="math" src="_images/math/c68d6431775a34a75492e335d0a3551d2d2d27bf.png" alt="PDF(t_{0})"/> the adjusted Lévy flight has a gradual rise in between
 <img class="math" src="_images/math/e61059085197d493281741274e95b4ec13853cd1.png" alt="t_{s}"/> and <img class="math" src="_images/math/6b14519f0e48e358e3ca7f919b52bf51559f687b.png" alt="t_{0}"/>. The other parameters have the following roles:</p>
 <blockquote>
 <div><ul class="simple">
 <li><img class="math" src="_images/math/e61059085197d493281741274e95b4ec13853cd1.png" alt="t_{s}"/> – the minimum step sizes.</li>
 <li><img class="math" src="_images/math/410a9d0df9c135dd73b269cba7ef04dcfd932b1f.png" alt="\beta"/> – the fraction of steps between <img class="math" src="_images/math/e61059085197d493281741274e95b4ec13853cd1.png" alt="t_{s}"/> and <img class="math" src="_images/math/6b14519f0e48e358e3ca7f919b52bf51559f687b.png" alt="t_{0}"/>.</li>
-<li><img class="math" src="_images/math/3666981dc77862de77b6ecfcb64aad59b425cbaf.png" alt="\gamma"/> – defines the gradient of the rise.</li>
+<li><img class="math" src="_images/math/3666981dc77862de77b6ecfcb64aad59b425cbaf.png" alt="\gamma"/> – the gradient of the rise.</li>
 </ul>
 </div></blockquote>
 <p>The PDF is thus defined as:</p>
@@ -448,10 +448,10 @@ vary these parameters individually whilst keeping all other parameters constant.
 </div>
 <div class="section" id="other-random-walk">
 <h4>Other Random Walk<a class="headerlink" href="#other-random-walk" title="Permalink to this headline">¶</a></h4>
-<p>To create a flight distribution with a user defined step size distribution. You will
+<p>To create a random walk distribution with a user defined steps, you will
 need to first generate a distribution of step sizes. To do this you will need to
-invert the CDF of the distribution. Once you have a distribution of step sizes
-you can pass this to the <code class="docutils literal notranslate"><span class="pre">get_random_flight</span></code> function.</p>
+invert the CDF of a distribution and input random uniform values between 0 and 1.
+Once you have a distribution of step sizes you can pass this to the <code class="docutils literal notranslate"><span class="pre">get_random_flight</span></code> function.</p>
 <p>We will step you through how to do this using a step size distribution which follows
 a log normal distribution.</p>
 <div class="math">

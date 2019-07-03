@@ -25,7 +25,7 @@ coordinate_utility
     :type r: array
     :param ra: Longitudinal celestial coordinates.
     :type ra: array
-    :param dec: Latitude celestial coordinates.
+    :param dec: Latitudinal celestial coordinates.
     :type dec: array
     :param units: Units of ``ra`` and ``dec`` given in either 'degrees' or 'radians'.
     :type units: str
@@ -39,13 +39,13 @@ coordinate_utility
 
 .. function:: spherical_2_unit_sphere(phi, theta[, units='degrees'])
 
-    Project coordinates on a sphere into cartesian coordinates on a unit sphere.
+    Project coordinates across a sphere (or on the sky) into cartesian coordinates on a unit sphere.
 
     :param r: Radial distance.
     :type r: array
     :param phi: Longitudinal coordinates.
     :type phi: array
-    :param theta: Latitude coordinates.
+    :param theta: Latitudinal coordinates.
     :type theta: array
     :param units: Units of ``ra`` and ``dec`` given in either 'degrees' or 'radians'.
     :type units: str
@@ -61,7 +61,7 @@ coordinate_utility
     :type r: array
     :param ra: Longitudinal celestial coordinates.
     :type ra: array
-    :param dec: Latitude celestial coordinates.
+    :param dec: Latitudinal celestial coordinates.
     :type dec: array
     :param units: Units of ``ra`` and ``dec`` given in either 'degrees' or 'radians'.
     :type units: str
@@ -75,9 +75,9 @@ coordinate_utility
 
 .. function:: perpendicular_distance_2_angle(distance)
 
-    Converts distances on a unit sphere to angular distances projected across a unit sphere.
+    Converts distances across a unit sphere to angular distances.
 
-    :param distance: Perpendicular distances across (i.e. going on the surface) of a unit sphere.
+    :param distance: Perpendicular distances across (i.e. going on the surface) a unit sphere.
     :type distance: array
 
-    :returns: **angular_distance** *(array)* -- The angular distance of points across a unit sphere.
+    :returns: **angular_distance** *(array)* -- The angular distance between points across a unit sphere.

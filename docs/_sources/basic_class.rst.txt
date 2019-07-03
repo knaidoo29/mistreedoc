@@ -68,7 +68,7 @@ GetMST
 
     .. method:: get_degree_for_edges()
 
-        Gets the degree of the nodes at each end of all edges.
+        Gets the degree at either end of an edge.
 
     .. function:: get_branches([box_size=None, sub_divisions=1])
 

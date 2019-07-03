@@ -320,16 +320,16 @@ we instead use a Lévy flight model which has a CDF:
 
 which we call the *adjusted Levy flight*, where :math:`t_{0}` and :math:`\alpha`
 play the same role as they do in the normal Lévy flight distribution. The CDF
-is built of two CDFs: (1) the normal Lévy flight part which operates for step sizes
+is built with two CDFs: (1) the normal Lévy flight part which operates for step sizes
 larger than :math:`t_{0}` and (2) the adjusted part operates between step sizes
 :math:`t_{s}` and :math:`t_{0}` where :math:`t_{s} < t_{0}`. Unlike the normal
 Lévy flight distribution, which transitions from a :math:`PDF(t<t_{0}) = 0` to a
-peak at :math:`PDF(t_{0})` the adjusted Lévy flight had a gradual rise in between
+peak at :math:`PDF(t_{0})` the adjusted Lévy flight has a gradual rise in between
 :math:`t_{s}` and :math:`t_{0}`. The other parameters have the following roles:
 
     * :math:`t_{s}` -- the minimum step sizes.
     * :math:`\beta` -- the fraction of steps between :math:`t_{s}` and :math:`t_{0}`.
-    * :math:`\gamma` -- defines the gradient of the rise.
+    * :math:`\gamma` -- the gradient of the rise.
 
 The PDF is thus defined as:
 
@@ -354,10 +354,10 @@ vary these parameters individually whilst keeping all other parameters constant.
 Other Random Walk
 ^^^^^^^^^^^^^^^^^
 
-To create a flight distribution with a user defined step size distribution. You will
+To create a random walk distribution with a user defined steps, you will
 need to first generate a distribution of step sizes. To do this you will need to
-invert the CDF of the distribution. Once you have a distribution of step sizes
-you can pass this to the ``get_random_flight`` function.
+invert the CDF of a distribution and input random uniform values between 0 and 1.
+Once you have a distribution of step sizes you can pass this to the ``get_random_flight`` function.
 
 We will step you through how to do this using a step size distribution which follows
 a log normal distribution.
