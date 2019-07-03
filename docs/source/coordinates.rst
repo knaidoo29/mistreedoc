@@ -34,8 +34,8 @@ coordinate_utility
 
     :returns: Returns tuple of either:
 
-        * **phi, theta** *(array)* -- 'spherical': spherical polar coordinates.
-        * **x, y, z** *(array)* -- 'cartesian': cartesian coordinates.
+        * **phi, theta** *(array)* -- spherical polar coordinates.
+        * **x, y, z** *(array)* -- cartesian coordinates.
 
 .. function:: spherical_2_unit_sphere(phi, theta[, units='degrees'])
 
@@ -70,8 +70,8 @@ coordinate_utility
 
     :returns: Returns tuple of either:
 
-        * **phi, theta** *(array)* -- 'spherical': spherical polar coordinates.
-        * **x, y, z** *(array)* -- 'cartesian': cartesian coordinates.
+        * **phi, theta** *(array)* -- spherical polar coordinates.
+        * **x, y, z** *(array)* -- cartesian coordinates.
 
 .. function:: perpendicular_distance_2_angle(distance)
 
