@@ -5,7 +5,7 @@ Introduction
 MiSTree is designed with the intent of being an easy to use minimum spanning tree
 library. The methods and statistics used in the module are discussed in the paper
 **"Beyond two-point statistics: using the Minimum Spanning Tree as a tool for cosmology"**
-[ArXiv=####:#####] which can be found `here <https://arxiv.org/list/astro-ph.CO/recent>`_.
+[ArXiv=1907.00989] which can be found `here <https://arxiv.org/abs/1907.00989>`_.
 
 Dependencies
 ------------
