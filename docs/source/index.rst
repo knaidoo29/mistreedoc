@@ -3,6 +3,8 @@
 .. image:: https://img.shields.io/badge/License-MIT-yellow.svg
    :target: https://lbesson.mit-license.org/
 
+<br/><br/>
+
 Introduction
 ------------
 
