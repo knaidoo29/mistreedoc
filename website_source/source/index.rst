@@ -1,10 +1,3 @@
-.. image:: https://zenodo.org/badge/170473458.svg
-   :target: https://zenodo.org/badge/latestdoi/170473458
-.. image:: https://img.shields.io/badge/License-MIT-yellow.svg
-   :target: https://lbesson.mit-license.org/
-
-<br/><br/>
-
 Introduction
 ------------
 
