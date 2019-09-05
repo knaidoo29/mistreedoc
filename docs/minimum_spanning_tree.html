@@ -86,7 +86,12 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Minimum Spanning Tree</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#tutorials">Tutorials</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#basic-usage">Basic Usage</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#advance-usage">Advance Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#binning-and-plotting">Binning and Plotting</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#binning">Binning</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#plotting">Plotting</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#advanced-usage">Advanced Usage</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#k-nearest-neighbours">k Nearest Neighbours</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#scale-cuts">Scale Cuts</a></li>
 </ul>
@@ -95,7 +100,10 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#functions">Functions</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="basic_class.html">GetMST</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hist_class.html">HistMST</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plothist_class.html">PlotHistMST</a></li>
 <li class="toctree-l3"><a class="reference internal" href="coordinates.html">coordinate_utility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hist_binning.html">binning</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mst_branches.html">branches</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mst_construct.html">construct</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mst_density.html">density</a></li>
@@ -103,6 +111,7 @@
 <li class="toctree-l3"><a class="reference internal" href="mst_scale_cut.html">scale_cut</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mst_stats.html">stats</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mst_tomo.html">tomo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plot_hist.html">plotting</a></li>
 </ul>
 </li>
 </ul>
@@ -288,8 +297,242 @@ where we plot a set of 2D random points:</p>
 </div>
 <a class="reference internal image-reference" href="_images/mst_plot_mst_branches_2d.png"><img alt="_images/mst_plot_mst_branches_2d.png" class="align-center" src="_images/mst_plot_mst_branches_2d.png" style="width: 525.0px; height: 525.0px;" /></a>
 </div>
-<div class="section" id="advance-usage">
-<h3>Advance Usage<a class="headerlink" href="#advance-usage" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="binning-and-plotting">
+<h3>Binning and Plotting<a class="headerlink" href="#binning-and-plotting" title="Permalink to this headline">¶</a></h3>
+<p>A very simple plot of the MST summary statistics can be generated using:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># begins by binning the data and storing this in a dictionary.</span>
+<span class="n">hmst</span> <span class="o">=</span> <span class="n">mist</span><span class="o">.</span><span class="n">HistMST</span><span class="p">()</span>
+<span class="n">hmst</span><span class="o">.</span><span class="n">setup</span><span class="p">()</span>
+<span class="n">mst_dict</span> <span class="o">=</span> <span class="n">hmst</span><span class="o">.</span><span class="n">get_hist</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+
+<span class="c1"># plotting which takes as input the dictionary created before.</span>
+<span class="n">pmst</span> <span class="o">=</span> <span class="n">mist</span><span class="o">.</span><span class="n">PlotHistMST</span><span class="p">()</span>
+<span class="n">pmst</span><span class="o">.</span><span class="n">read_mst</span><span class="p">(</span><span class="n">mst_dict</span><span class="p">)</span>
+<span class="n">pmst</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/plot_hist_default.png"><img alt="_images/plot_hist_default.png" class="align-center" src="_images/plot_hist_default.png" style="width: 864.0px; height: 216.0px;" /></a>
+<p>The first <code class="docutils literal notranslate"><span class="pre">HistMST</span></code> class bins the data and stores it as a dictionary and the
+<code class="docutils literal notranslate"><span class="pre">PlotHistMST</span></code> class is used make the plot.</p>
+<div class="section" id="binning">
+<h4>Binning<a class="headerlink" href="#binning" title="Permalink to this headline">¶</a></h4>
+<p>Once we have created the data set we need to bin the data. This is done by first
+initialising the <code class="docutils literal notranslate"><span class="pre">HistMST</span></code> class and then setting it up. The most simple case
+(using the default settings) is shown below.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">hmst</span> <span class="o">=</span> <span class="n">mist</span><span class="o">.</span><span class="n">HistMST</span><span class="p">()</span>
+<span class="n">hmst</span><span class="o">.</span><span class="n">setup</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>We can make the following changes:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># to bin in log_10(l) and log_10(b) rather than just l and b:</span>
+<span class="n">hmst</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">uselog</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="c1"># to bin using s rather than sqrt(1-s)</span>
+<span class="n">hmst</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">use_sqrt_s</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+
+<span class="c1"># to output the unnormalised histograms (i.e. just counts)</span>
+<span class="n">hmst</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">usenorm</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+
+<span class="c1"># to change the range of the binning, the number of bins, etc:</span>
+
+<span class="c1"># for the degree, although this is rarely necessary, please ensure the minimum</span>
+<span class="c1"># and maximum are half integers and the number of bins is equal to maximum-minimum.</span>
+<span class="n">hmst</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">d_min</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">d_max</span><span class="o">=</span><span class="mf">6.5</span><span class="p">,</span> <span class="n">num_d_bins</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span> <span class="c1"># these are the default values.</span>
+
+<span class="c1"># for edge lengths, note the default values are l_min=0., l_max=1.05*l.max()</span>
+<span class="c1"># and ``num_l_bins=100``.</span>
+<span class="n">hmst</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">l_min</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span> <span class="n">l_max</span><span class="o">=</span><span class="mf">10.</span><span class="p">,</span> <span class="n">num_l_bins</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+
+<span class="c1"># for edge lengths, note the default value are b_min=0. and b_max=1.05*b.max()</span>
+<span class="c1"># and ``num_b_bins=100``.</span>
+<span class="n">hmst</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">b_min</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span> <span class="n">b_max</span><span class="o">=</span><span class="mf">10.</span><span class="p">,</span> <span class="n">num_b_bins</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+
+<span class="c1"># for branch shape in either projections the range can be altered by changing the following,</span>
+<span class="c1"># however it will rarely be necessary to change from the default values of s_min=0 and s_max=1.,</span>
+<span class="c1"># but you may want to alter the binning (default is 50).</span>
+<span class="n">hmst</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">s_min</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span> <span class="n">s_max</span><span class="o">=</span><span class="mf">1.</span><span class="p">,</span> <span class="n">num_s_bins</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+
+<span class="c1"># if you are instead using $log_{10}l$ and $log_{10}b$ then you would specify the range</span>
+<span class="c1"># by using the following but note the binning still uses num_l_bins and num_b_bins.</span>
+<span class="n">hmst</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">logl_min</span><span class="o">=-</span><span class="mf">2.</span><span class="p">,</span> <span class="n">logl_max</span><span class="o">=</span><span class="mf">4.</span><span class="p">,</span> <span class="n">logb_min</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">logb_max</span><span class="o">=</span><span class="mf">5.</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Once this is done we can actually pass the MST statistics to the class and create a dictionary
+of the binned statistics:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mst_dict</span> <span class="o">=</span> <span class="n">hmst</span><span class="o">.</span><span class="n">get_hist</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The dictionary created is stored with the following entries:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mst_hist</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;uselog&quot;</span> <span class="p">:</span> <span class="n">uselog</span><span class="p">,</span> <span class="c1"># stores whether the bins for l and b are in logs.</span>
+  <span class="s2">&quot;use_sqrt_s&quot;</span> <span class="p">:</span> <span class="n">use_sqrt_s</span><span class="p">,</span> <span class="c1"># stores whether the the bins for s are in s or sqrt(1-s)</span>
+  <span class="s2">&quot;usenorm&quot;</span> <span class="p">:</span> <span class="n">usenorm</span><span class="p">,</span> <span class="c1"># stores whether the histograms are normalised.</span>
+  <span class="s2">&quot;isgroup&quot;</span> <span class="p">:</span> <span class="bp">False</span><span class="p">,</span> <span class="c1"># stores whether the histogram come from a group of histograms (discussed later)</span>
+  <span class="s2">&quot;x_d&quot;</span> <span class="p">:</span> <span class="n">x_d</span><span class="p">,</span> <span class="c1"># bin centres for degree</span>
+  <span class="s2">&quot;y_d&quot;</span> <span class="p">:</span> <span class="n">y_d</span><span class="p">,</span> <span class="c1"># bin heights for degree</span>
+  <span class="s2">&quot;x_l&quot;</span> <span class="p">:</span> <span class="n">x_l</span><span class="p">,</span> <span class="c1"># bin centres for edge length</span>
+  <span class="s2">&quot;y_l&quot;</span> <span class="p">:</span> <span class="n">y_l</span><span class="p">,</span> <span class="c1"># bin heights for edge length</span>
+  <span class="s2">&quot;x_b&quot;</span> <span class="p">:</span> <span class="n">x_b</span><span class="p">,</span> <span class="c1"># bin centres for branch length</span>
+  <span class="s2">&quot;y_b&quot;</span> <span class="p">:</span> <span class="n">y_b</span><span class="p">,</span> <span class="c1"># bin heights for branch length</span>
+  <span class="s2">&quot;x_s&quot;</span> <span class="p">:</span> <span class="n">x_s</span><span class="p">,</span> <span class="c1"># bin centres for branch shape</span>
+  <span class="s2">&quot;y_s&quot;</span> <span class="p">:</span> <span class="n">y_s</span>  <span class="c1"># bin heights for branch shape</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Finally, if we want to instead store the ensemble mean and standard deviation of a group of MSTs we would
+add the individual MST to <code class="docutils literal notranslate"><span class="pre">HistMST</span></code> class in the following way:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">hmst</span><span class="o">.</span><span class="n">start_group</span><span class="p">()</span> <span class="c1"># this tells HistMST to store the individual binned MST statistics</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">number_of_realisations</span><span class="p">):</span>
+
+    <span class="c1"># Read or measure MST statistics.</span>
+
+    <span class="c1"># we use it just as we did before, where the outputted dictionary is for that single</span>
+    <span class="c1"># realisation</span>
+
+    <span class="n">mst_dict</span> <span class="o">=</span> <span class="n">hmst</span><span class="o">.</span><span class="n">get_hist</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+
+<span class="c1"># to output the mean and standard deviation of the ensemble histograms.</span>
+
+<span class="n">mst_dict_group</span> <span class="o">=</span> <span class="n">hmst</span><span class="o">.</span><span class="n">end_group</span><span class="p">()</span>
+
+<span class="c1"># you must use hmst.start_group() to start collecting MST statistics from another group</span>
+<span class="c1"># otherwise this will continue collecting histograms for the current group</span>
+</pre></div>
+</div>
+<p>Similarly to before the dictionary contains many of the same elements with some additional ones.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mst_hist_group</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;uselog&quot;</span> <span class="p">:</span> <span class="n">uselog</span><span class="p">,</span> <span class="c1"># stores whether the bins for l and b are in logs.</span>
+  <span class="s2">&quot;use_sqrt_s&quot;</span> <span class="p">:</span> <span class="n">use_sqrt_s</span><span class="p">,</span> <span class="c1"># stores whether the the bins for s are in s or sqrt(1-s)</span>
+  <span class="s2">&quot;usenorm&quot;</span> <span class="p">:</span> <span class="n">usenorm</span><span class="p">,</span> <span class="c1"># stores whether the histograms are normalised.</span>
+  <span class="s2">&quot;isgroup&quot;</span> <span class="p">:</span> <span class="bp">True</span><span class="p">,</span> <span class="c1"># stores whether the histogram come from a group of histograms</span>
+  <span class="s2">&quot;x_d&quot;</span> <span class="p">:</span> <span class="n">x_d</span><span class="p">,</span> <span class="c1"># bin centres for degree</span>
+  <span class="s2">&quot;y_d&quot;</span> <span class="p">:</span> <span class="n">y_d</span><span class="p">,</span> <span class="c1"># the mean bin heights for degree</span>
+  <span class="s2">&quot;y_d_std&quot;</span> <span class="p">:</span> <span class="n">y_d_std</span> <span class="c1"># standard deviation for the bin heights for degree</span>
+  <span class="s2">&quot;x_l&quot;</span> <span class="p">:</span> <span class="n">x_l</span><span class="p">,</span> <span class="c1"># bin centres for edge length</span>
+  <span class="s2">&quot;y_l&quot;</span> <span class="p">:</span> <span class="n">y_l</span><span class="p">,</span> <span class="c1"># the mean bin heights for edge length</span>
+  <span class="s2">&quot;y_l_std&quot;</span> <span class="p">:</span> <span class="n">y_l_std</span> <span class="c1"># standard deviation for the bin heights for edge length</span>
+  <span class="s2">&quot;x_b&quot;</span> <span class="p">:</span> <span class="n">x_b</span><span class="p">,</span> <span class="c1"># bin centres for branch length</span>
+  <span class="s2">&quot;y_b&quot;</span> <span class="p">:</span> <span class="n">y_b</span><span class="p">,</span> <span class="c1"># the mean bin heights for branch length</span>
+  <span class="s2">&quot;y_b_std&quot;</span> <span class="p">:</span> <span class="n">y_b_std</span> <span class="c1"># standard deviation for the bin heights for branch length</span>
+  <span class="s2">&quot;x_s&quot;</span> <span class="p">:</span> <span class="n">x_s</span><span class="p">,</span> <span class="c1"># bin centres for branch shape</span>
+  <span class="s2">&quot;y_s&quot;</span> <span class="p">:</span> <span class="n">y_s</span>  <span class="c1"># the mean bin heights for branch shape</span>
+  <span class="s2">&quot;y_s_std&quot;</span> <span class="p">:</span> <span class="n">y_s_std</span> <span class="c1"># standard deviation for the bin heights for branch shape</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This makes the assumption that the counts follow a Gaussian distribution, since these
+are counts this actually follows a discrete Poisson distribution but for large values
+a Gaussian is an appropriate approximation (usually greater than 50 should be okay).
+This is important to consider if you use these summary statistics in regions where
+the counts are small.</p>
+</div>
+<div class="section" id="plotting">
+<h4>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">¶</a></h4>
+<p>For the following plots we will change the matplotlib font using:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mist</span><span class="o">.</span><span class="n">set_plot_default</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>You can choose to use this as well or use the default matplotlib fonts.</p>
+<p>Once we have the binned MST dictionary we can plot it very simply using <code class="docutils literal notranslate"><span class="pre">PlotHistMST</span></code> class:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pmst</span> <span class="o">=</span> <span class="n">mist</span><span class="o">.</span><span class="n">PlotHistMST</span><span class="p">()</span>
+<span class="n">pmst</span><span class="o">.</span><span class="n">read_mst</span><span class="p">(</span><span class="n">mst_hist</span><span class="p">)</span>
+<span class="n">pmst</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/plot_hist_default2.png"><img alt="_images/plot_hist_default2.png" class="align-center" src="_images/plot_hist_default2.png" style="width: 864.0px; height: 216.0px;" /></a>
+<p>To alter how the plot looks we can alter the following:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pmst</span> <span class="o">=</span> <span class="n">mist</span><span class="o">.</span><span class="n">PlotHistMST</span><span class="p">()</span>
+<span class="n">pmst</span><span class="o">.</span><span class="n">read_mst</span><span class="p">(</span><span class="n">mst_hist</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;Dodgerblue&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">2.</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span>
+             <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Randoms&#39;</span><span class="p">)</span>
+<span class="n">pmst</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/plot_hist_altered.png"><img alt="_images/plot_hist_altered.png" class="align-center" src="_images/plot_hist_altered.png" style="width: 864.0px; height: 216.0px;" /></a>
+<p>To change from the default box binned plots to smooth lines (excluding degree):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pmst</span> <span class="o">=</span> <span class="n">mist</span><span class="o">.</span><span class="n">PlotHistMST</span><span class="p">()</span>
+<span class="n">pmst</span><span class="o">.</span><span class="n">read_mst</span><span class="p">(</span><span class="n">mst_hist</span><span class="p">)</span>
+<span class="n">pmst</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">usebox</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/plot_hist_nobox.png"><img alt="_images/plot_hist_nobox.png" class="align-center" src="_images/plot_hist_nobox.png" style="width: 864.0px; height: 216.0px;" /></a>
+<p>Comparing randoms points, a Levy-Flight distribution and adjusted Levy-Flight distribution:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># We first create a random distribution</span>
+<span class="n">x_r</span> <span class="o">=</span> <span class="mf">75.</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random_sample</span><span class="p">(</span><span class="mi">50000</span><span class="p">)</span>
+<span class="n">y_r</span> <span class="o">=</span> <span class="mf">75.</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random_sample</span><span class="p">(</span><span class="mi">50000</span><span class="p">)</span>
+<span class="n">z_r</span> <span class="o">=</span> <span class="mf">75.</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random_sample</span><span class="p">(</span><span class="mi">50000</span><span class="p">)</span>
+
+<span class="c1"># a levy flight distribution</span>
+<span class="n">x_lf</span><span class="p">,</span> <span class="n">y_lf</span><span class="p">,</span> <span class="n">z_lf</span> <span class="o">=</span> <span class="n">mist</span><span class="o">.</span><span class="n">get_levy_flight</span><span class="p">(</span><span class="mi">50000</span><span class="p">)</span>
+
+<span class="c1"># an adjusted levy flight distribution</span>
+<span class="n">x_alf</span><span class="p">,</span> <span class="n">y_alf</span><span class="p">,</span> <span class="n">z_alf</span> <span class="o">=</span> <span class="n">mist</span><span class="o">.</span><span class="n">get_adjusted_levy_flight</span><span class="p">(</span><span class="mi">50000</span><span class="p">)</span>
+
+<span class="c1"># then construct and measure the MST for each distribution</span>
+<span class="n">mst</span> <span class="o">=</span> <span class="n">mist</span><span class="o">.</span><span class="n">GetMST</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x_r</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y_r</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="n">z_r</span><span class="p">)</span>
+<span class="n">d_r</span><span class="p">,</span> <span class="n">l_r</span><span class="p">,</span> <span class="n">b_r</span><span class="p">,</span> <span class="n">s_r</span> <span class="o">=</span> <span class="n">mst</span><span class="o">.</span><span class="n">get_stats</span><span class="p">()</span>
+
+<span class="n">mst</span> <span class="o">=</span> <span class="n">mist</span><span class="o">.</span><span class="n">GetMST</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x_lf</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y_lf</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="n">z_lf</span><span class="p">)</span>
+<span class="n">d_lf</span><span class="p">,</span> <span class="n">l_lf</span><span class="p">,</span> <span class="n">b_lf</span><span class="p">,</span> <span class="n">s_lf</span> <span class="o">=</span> <span class="n">mst</span><span class="o">.</span><span class="n">get_stats</span><span class="p">()</span>
+
+<span class="n">mst</span> <span class="o">=</span> <span class="n">mist</span><span class="o">.</span><span class="n">GetMST</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x_alf</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y_alf</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="n">z_alf</span><span class="p">)</span>
+<span class="n">d_alf</span><span class="p">,</span> <span class="n">l_alf</span><span class="p">,</span> <span class="n">b_alf</span><span class="p">,</span> <span class="n">s_alf</span> <span class="o">=</span> <span class="n">mst</span><span class="o">.</span><span class="n">get_stats</span><span class="p">()</span>
+
+<span class="c1"># bin the MST statistics</span>
+<span class="n">hmst</span> <span class="o">=</span> <span class="n">mist</span><span class="o">.</span><span class="n">HistMST</span><span class="p">()</span>
+<span class="n">hmst</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">uselog</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">hist_r</span> <span class="o">=</span> <span class="n">hmst</span><span class="o">.</span><span class="n">get_hist</span><span class="p">(</span><span class="n">d_r</span><span class="p">,</span> <span class="n">l_r</span><span class="p">,</span> <span class="n">b_r</span><span class="p">,</span> <span class="n">s_r</span><span class="p">)</span>
+<span class="n">hist_lf</span> <span class="o">=</span> <span class="n">hmst</span><span class="o">.</span><span class="n">get_hist</span><span class="p">(</span><span class="n">d_lf</span><span class="p">,</span> <span class="n">l_lf</span><span class="p">,</span> <span class="n">b_lf</span><span class="p">,</span> <span class="n">s_lf</span><span class="p">)</span>
+<span class="n">hist_alf</span> <span class="o">=</span> <span class="n">hmst</span><span class="o">.</span><span class="n">get_hist</span><span class="p">(</span><span class="n">d_alf</span><span class="p">,</span> <span class="n">l_alf</span><span class="p">,</span> <span class="n">b_alf</span><span class="p">,</span> <span class="n">s_alf</span><span class="p">)</span>
+
+<span class="c1"># and plot it</span>
+<span class="n">pmst</span> <span class="o">=</span> <span class="n">mist</span><span class="o">.</span><span class="n">PlotHistMST</span><span class="p">()</span>
+<span class="n">pmst</span><span class="o">.</span><span class="n">read_mst</span><span class="p">(</span><span class="n">hist_r</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Randoms&#39;</span><span class="p">)</span>
+<span class="n">pmst</span><span class="o">.</span><span class="n">read_mst</span><span class="p">(</span><span class="n">hist_lf</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Levy Flight&#39;</span><span class="p">)</span>
+<span class="n">pmst</span><span class="o">.</span><span class="n">read_mst</span><span class="p">(</span><span class="n">hist_alf</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Adjusted Levy Flight&#39;</span><span class="p">)</span>
+<span class="n">pmst</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/plot_hist_comparison.png"><img alt="_images/plot_hist_comparison.png" class="align-center" src="_images/plot_hist_comparison.png" style="width: 864.0px; height: 216.0px;" /></a>
+<p>We can plot difference subplots:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pmst</span> <span class="o">=</span> <span class="n">mist</span><span class="o">.</span><span class="n">PlotHistMST</span><span class="p">()</span>
+<span class="n">pmst</span><span class="o">.</span><span class="n">read_mst</span><span class="p">(</span><span class="n">hist_lf</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Levy Flight&#39;</span><span class="p">)</span>
+<span class="n">pmst</span><span class="o">.</span><span class="n">read_mst</span><span class="p">(</span><span class="n">hist_alf</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Adjusted Levy Flight&#39;</span><span class="p">)</span>
+<span class="n">pmst</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">usecomp</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/plot_hist_comparison2_nofraction.png"><img alt="_images/plot_hist_comparison2_nofraction.png" class="align-center" src="_images/plot_hist_comparison2_nofraction.png" style="width: 864.0px; height: 216.0px;" /></a>
+<p>Finally plotting the histogram for a group works in the very same way except we
+pass the dictionary of a group. The final plot has 1 sigma error bars.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">hmst</span> <span class="o">=</span> <span class="n">mist</span><span class="o">.</span><span class="n">HistMST</span><span class="p">()</span>
+<span class="n">hmst</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">uselog</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="n">hist_lf</span> <span class="o">=</span> <span class="n">hmst</span><span class="o">.</span><span class="n">get_hist</span><span class="p">(</span><span class="n">d_lf</span><span class="p">,</span> <span class="n">l_lf</span><span class="p">,</span> <span class="n">b_lf</span><span class="p">,</span> <span class="n">s_lf</span><span class="p">)</span>
+
+<span class="n">hmst</span><span class="o">.</span><span class="n">start_group</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+
+    <span class="n">x_alf</span><span class="p">,</span> <span class="n">y_alf</span><span class="p">,</span> <span class="n">z_alf</span> <span class="o">=</span> <span class="n">mist</span><span class="o">.</span><span class="n">get_adjusted_levy_flight</span><span class="p">(</span><span class="mi">50000</span><span class="p">)</span>
+
+    <span class="n">mst</span> <span class="o">=</span> <span class="n">mist</span><span class="o">.</span><span class="n">GetMST</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x_alf</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y_alf</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="n">z_alf</span><span class="p">)</span>
+    <span class="n">d_alf</span><span class="p">,</span> <span class="n">l_alf</span><span class="p">,</span> <span class="n">b_alf</span><span class="p">,</span> <span class="n">s_alf</span> <span class="o">=</span> <span class="n">mst</span><span class="o">.</span><span class="n">get_stats</span><span class="p">()</span>
+
+    <span class="n">_hist_alf</span> <span class="o">=</span> <span class="n">hmst</span><span class="o">.</span><span class="n">get_hist</span><span class="p">(</span><span class="n">d_alf</span><span class="p">,</span> <span class="n">l_alf</span><span class="p">,</span> <span class="n">b_alf</span><span class="p">,</span> <span class="n">s_alf</span><span class="p">)</span>
+
+<span class="n">hist_alf_group</span> <span class="o">=</span> <span class="n">hmst</span><span class="o">.</span><span class="n">end_group</span><span class="p">()</span>
+
+<span class="n">pmst</span> <span class="o">=</span> <span class="n">mist</span><span class="o">.</span><span class="n">PlotHistMST</span><span class="p">()</span>
+<span class="n">pmst</span><span class="o">.</span><span class="n">read_mst</span><span class="p">(</span><span class="n">hist_lf</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Levy Flight&#39;</span><span class="p">)</span>
+<span class="n">pmst</span><span class="o">.</span><span class="n">read_mst</span><span class="p">(</span><span class="n">hist_alf_group</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Adjusted Levy Flight&#39;</span><span class="p">)</span>
+<span class="n">pmst</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">usecomp</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/plot_hist_comparison_group.png"><img alt="_images/plot_hist_comparison_group.png" class="align-center" src="_images/plot_hist_comparison_group.png" style="width: 864.0px; height: 216.0px;" /></a>
+</div>
+</div>
+<div class="section" id="advanced-usage">
+<h3>Advanced Usage<a class="headerlink" href="#advanced-usage" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="k-nearest-neighbours">
 <h4>k Nearest Neighbours<a class="headerlink" href="#k-nearest-neighbours" title="Permalink to this headline">¶</a></h4>
 <p>The k-nearest neighbour graph is a spanning graph which is passed on to the
@@ -338,12 +581,15 @@ the following:</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="basic_class.html">GetMST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hist_class.html">HistMST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plothist_class.html">PlotHistMST</a></li>
 </ul>
 </div>
 <p>Functions:</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="coordinates.html">coordinate_utility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hist_binning.html">binning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mst_branches.html">branches</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mst_construct.html">construct</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mst_density.html">density</a></li>
@@ -351,6 +597,7 @@ the following:</p>
 <li class="toctree-l1"><a class="reference internal" href="mst_scale_cut.html">scale_cut</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mst_stats.html">stats</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mst_tomo.html">tomo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plot_hist.html">plotting</a></li>
 </ul>
 </div>
 </div>

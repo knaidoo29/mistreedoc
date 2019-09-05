@@ -1,0 +1,302 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>PlotHistMST &mdash;   documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="coordinate_utility" href="coordinates.html" />
+    <link rel="prev" title="HistMST" href="hist_class.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/mistree_logo_extra.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="levy_flight.html">Lévy Flight</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="minimum_spanning_tree.html">Minimum Spanning Tree</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="minimum_spanning_tree.html#tutorials">Tutorials</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="minimum_spanning_tree.html#functions">Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="basic_class.html">GetMST</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hist_class.html">HistMST</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">PlotHistMST</a></li>
+<li class="toctree-l3"><a class="reference internal" href="coordinates.html">coordinate_utility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hist_binning.html">binning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mst_branches.html">branches</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mst_construct.html">construct</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mst_density.html">density</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mst_graph.html">graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mst_scale_cut.html">scale_cut</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mst_stats.html">stats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mst_tomo.html">tomo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plot_hist.html">plotting</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html"></a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="minimum_spanning_tree.html">Minimum Spanning Tree</a> &raquo;</li>
+        
+      <li>PlotHistMST</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/plothist_class.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="plothistmst">
+<h1>PlotHistMST<a class="headerlink" href="#plothistmst" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="PlotHistMST">
+<em class="property">class </em><code class="descname">PlotHistMST</code><a class="headerlink" href="#PlotHistMST" title="Permalink to this definition">¶</a></dt>
+<dd><p>A class for plotting the MST statistics.</p>
+<dl class="function">
+<dt id="PlotHistMST.read_mst">
+<code class="descname">read_mst</code><span class="sig-paren">(</span><em>mst_hist</em><span class="optional">[</span>, <em>color=None</em>, <em>linewidth=2.</em>, <em>linestyle=None</em>, <em>alpha=0.8</em>, <em>label=None</em>, <em>alpha_envelope=0.3</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#PlotHistMST.read_mst" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input MST statistics.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>mst_hist</strong> (<em>dict</em>) – Binned MST dictionary given in the format outputted by HistMST.</li>
+<li><strong>color</strong> (<em>str</em>) – Color of the MST histogram.</li>
+<li><strong>linewidth</strong> (<em>float</em>) – Width of the histogram line used.</li>
+<li><strong>linestyle</strong> (<em>str</em>) – Linestyle used.</li>
+<li><strong>alpha</strong> (<em>float</em>) – The transparency of the line.</li>
+<li><strong>label</strong> (<em>str</em>) – label used in the legend, this will only appear in the legend if this is given.</li>
+<li><strong>alpha_envelope</strong> (<em>float</em>) – The transparency of envelopes (usually the standard deviation of the counts in each bin).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="PlotHistMST.plot">
+<code class="descname">plot</code><span class="sig-paren">(</span><em>[usebox=True, saveas=None, fontsize=16, figsize=(16, 4), units=None, showenvelopes=True, usecomp=True, usemean=False, heigh_ratios=[2, 1], usefraction=True, whichcomp=0, plotzeroline=True, legend=True, subplot_adjust_top=0.85, legend_fontsize=14, legend_column=4, xlabels=[None, None, None, None]]</em><span class="sig-paren">)</span><a class="headerlink" href="#PlotHistMST.plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Outputs the final plot of the MST statistics.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>usebox</strong> (<em>bool</em>) – For l, b and s this sets whether to use boxes for the histogram or to simple plot as line from the bin centre.</li>
+<li><strong>saveas</strong> (<em>str</em>) – If not None, this will save the plot with the name provided.</li>
+<li><strong>fontsize</strong> (<em>int</em>) – Fontsize of axis labels.</li>
+<li><strong>figsize</strong> (<em>tuple</em>) – Dimensions of the figure.</li>
+<li><strong>units</strong> (<em>str</em>) – Units of l and b MST statistics, if None is supplied then we assume it is unitless.</li>
+<li><strong>showenvelopes</strong> (<em>bool</em>) – This determines whether to plot data with input standard deviation.</li>
+<li><strong>usecomp</strong> (<em>bool</em>) – Determines whether to include comparison subplots.</li>
+<li><strong>usemean</strong> (<em>bool</em>) – For comparison plots, the determines whether to use the mean of input distributions.</li>
+<li><strong>height_ratios</strong> (<em>tuple</em>) – Height ratio between main plots and comparison plots.</li>
+<li><strong>usefraction</strong> (<em>bool</em>) – If true comparison plots are given by the fractional difference to a reference data otherwise they are given as absolute differences.</li>
+<li><strong>whichcomp</strong> (<em>int</em>) – Determines which data should be the reference data that all other data is compared to. Only used if usemean == False.</li>
+<li><strong>plotzeroline</strong> (<em>bool</em>) – Plots horizontal zero line for subplot.</li>
+<li><strong>legend</strong> (<em>bool</em>) – Determines whether to include a legend.</li>
+<li><strong>subplot_adjust_top</strong> (<em>If legend == True then the figure's top is adjusted by the input value.</em>) – float</li>
+<li><strong>legend_fontsize</strong> (<em>int</em>) – Size of legend text.</li>
+<li><strong>legend_column</strong> (<em>int</em>) – Number of keys in each line of the legend.</li>
+<li><strong>xlabels</strong> (<em>list</em>) – List of string labels to replace the default if not set to None.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="PlotHistMST.clean">
+<code class="descname">clean</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#PlotHistMST.clean" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets PlotHistMST variables.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="coordinates.html" class="btn btn-neutral float-right" title="coordinate_utility" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="hist_class.html" class="btn btn-neutral" title="HistMST" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Krishna Naidoo
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
