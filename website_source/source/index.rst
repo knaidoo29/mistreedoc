@@ -70,7 +70,7 @@ Contents
 Version History
 ---------------
 
-**Version 1**:
+**Version 1.0**:
 
    * Constructing the MST of an input data set:
 
@@ -87,6 +87,10 @@ Version History
       - Adjusted Lévy flight.
       - User defined random walk distribution.
       - In 2D/3D and with/without periodic boundary conditions.
+
+**Version 1.1**:
+
+    * Added binning (``HistMST``) and plotting (``PlotHistMST``) classes for handling the MST statistics.
 
 Support
 -------
