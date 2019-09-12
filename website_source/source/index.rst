@@ -12,6 +12,7 @@ Dependencies
 You will need the following python modules:
 
 * `numpy <http://www.numpy.org/>`_
+* `matplotlib <https://matplotlib.org>`_
 * `scipy <https://scipy.org/>`_
 * `scikit-learn <http://scikit-learn.org/stable/>`_
 * `f2py <https://docs.scipy.org/doc/numpy/f2py/>`_ (should be installed with numpy)
