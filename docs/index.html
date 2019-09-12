@@ -164,37 +164,19 @@ library. The methods and statistics used in the module are discussed in the pape
 <li><a class="reference external" href="http://scikit-learn.org/stable/">scikit-learn</a></li>
 <li><a class="reference external" href="https://docs.scipy.org/doc/numpy/f2py/">f2py</a> (should be installed with numpy)</li>
 </ul>
-<p>If <code class="docutils literal notranslate"><span class="pre">f2py</span></code> cannot find a <code class="docutils literal notranslate"><span class="pre">gcc</span></code> compiler then the fortran modules will not compile.
-If you have this issue and are using an anaconda distribution of python then you
-should be able to install <code class="docutils literal notranslate"><span class="pre">gcc</span></code> directly using the commands:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">anaconda</span> <span class="n">gcc</span>
-</pre></div>
-</div>
 <p>The module has been tested on Python version 2.7, 3.5 and 3.7.</p>
 </div>
 <div class="section" id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
-<p>To use MiSTree you must first download the package from <a class="reference external" href="https://github.com/knaidoo29/mistree">github</a>. Using a terminal go into the MiSTree
-directory and run:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span>
+<p>MiSTree can be installed as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">mistree</span> <span class="p">[</span><span class="o">--</span><span class="n">user</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>This will compile a set of fortran subroutines which are called by MiSTree. If they are
-compiled correctly you should see a message of the form:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Check</span> <span class="n">whether</span> <span class="n">the</span> <span class="n">fortran</span> <span class="n">files</span> <span class="n">have</span> <span class="n">compiled</span><span class="o">.</span>
-<span class="s1">&#39;fortran file 1&#39;</span> <span class="o">...</span> <span class="n">Yes</span>
- <span class="o">...</span>
-<span class="s1">&#39;fortran file N&#39;</span> <span class="o">...</span> <span class="n">Yes</span>
+<p>The <cite>–user</cite> is optional and only required if you don’t have write permission. If you
+want to work on the Github version you can clone the <a class="reference external" href="https://github.com/knaidoo29/mistree">repository</a>
+and install it in place:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">e</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">mistree</span> <span class="p">[</span><span class="o">--</span><span class="n">user</span><span class="p">]</span>
 </pre></div>
-</div>
-<p>Assuming these compile correctly you will then need to add the MiSTree directory
-to your python path.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p>If you’re using a mac you would add this to your <code class="docutils literal notranslate"><span class="pre">.bash_profile</span></code> file (a hidden file
-located in your home folder):</p>
-<p><code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">PYTHONPATH=$PYTHONPATH:&lt;path/to/mistree&gt;</span></code></p>
-<p class="last">Then run <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">.bash_profile</span></code>.</p>
 </div>
 <p>Once this is done you should be able to call MiSTree from python:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">mistree</span> <span class="kn">as</span> <span class="nn">mist</span>

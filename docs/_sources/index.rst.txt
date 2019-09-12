@@ -17,47 +17,26 @@ You will need the following python modules:
 * `scikit-learn <http://scikit-learn.org/stable/>`_
 * `f2py <https://docs.scipy.org/doc/numpy/f2py/>`_ (should be installed with numpy)
 
-If ``f2py`` cannot find a ``gcc`` compiler then the fortran modules will not compile.
-If you have this issue and are using an anaconda distribution of python then you
-should be able to install ``gcc`` directly using the commands::
-
-    conda install -c anaconda gcc
-
 The module has been tested on Python version 2.7, 3.5 and 3.7.
 
 Installation
 ------------
 
-To use MiSTree you must first download the package from `github
-<https://github.com/knaidoo29/mistree>`_. Using a terminal go into the MiSTree
-directory and run::
+MiSTree can be installed as follows::
 
-   python setup.py
+    pip install mistree [--user]
 
-This will compile a set of fortran subroutines which are called by MiSTree. If they are
-compiled correctly you should see a message of the form::
+The `--user` is optional and only required if you don’t have write permission. If you
+want to work on the Github version you can clone the `repository <https://github.com/knaidoo29/mistree>`_
+and install it in place::
 
-   Check whether the fortran files have compiled.
-   'fortran file 1' ... Yes
-    ...
-   'fortran file N' ... Yes
-
-Assuming these compile correctly you will then need to add the MiSTree directory
-to your python path.
-
-.. note::
-    If you're using a mac you would add this to your ``.bash_profile`` file (a hidden file
-    located in your home folder):
-
-    ``export PYTHONPATH=$PYTHONPATH:<path/to/mistree>``
-
-    Then run ``source .bash_profile``.
+    pip install -e /path/to/mistree [--user]
 
 Once this is done you should be able to call MiSTree from python:
 
 .. code-block:: python
 
-   import mistree as mist
+    import mistree as mist
 
 Contents
 --------
