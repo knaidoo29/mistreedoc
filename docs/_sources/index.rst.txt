@@ -9,7 +9,8 @@ library. The methods and statistics used in the module are discussed in the pape
 Dependencies
 ------------
 
-* Python 2.7 or 3.5+
+MiSTree will work on Python 2.7 or 3.5+ and requires the following modules:
+
 * `numpy <http://www.numpy.org/>`_
 * `matplotlib <https://matplotlib.org>`_
 * `scipy <https://scipy.org/>`_
