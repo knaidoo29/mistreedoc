@@ -30,7 +30,9 @@ The ``--user`` is optional and only required if you don’t have write permissio
 want to work on the Github version you can clone the `repository <https://github.com/knaidoo29/mistree>`_
 and install it in place::
 
-    pip install -e /path/to/mistree [--user]
+    git clone https://github.com/knaidoo29/mistree.git
+    cd mistree
+    pip install -e . [--user]
 
 Once this is done you should be able to call MiSTree from python:
 
