@@ -11,6 +11,7 @@ Dependencies
 
 You will need the following python modules:
 
+* Python 2.7 or 3.5+
 * `numpy <http://www.numpy.org/>`_
 * `matplotlib <https://matplotlib.org>`_
 * `scipy <https://scipy.org/>`_
