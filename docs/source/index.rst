@@ -9,16 +9,12 @@ library. The methods and statistics used in the module are discussed in the pape
 Dependencies
 ------------
 
-You will need the following python modules:
-
 * Python 2.7 or 3.5+
 * `numpy <http://www.numpy.org/>`_
 * `matplotlib <https://matplotlib.org>`_
 * `scipy <https://scipy.org/>`_
 * `scikit-learn <http://scikit-learn.org/stable/>`_
 * `f2py <https://docs.scipy.org/doc/numpy/f2py/>`_ (should be installed with numpy)
-
-The module has been tested on Python version 2.7, 3.5 and 3.7.
 
 Installation
 ------------
