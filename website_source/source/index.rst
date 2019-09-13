@@ -26,7 +26,7 @@ MiSTree can be installed as follows::
 
     pip install mistree [--user]
 
-The `--user` is optional and only required if you don’t have write permission. If you
+The ``--user`` is optional and only required if you don’t have write permission. If you
 want to work on the Github version you can clone the `repository <https://github.com/knaidoo29/mistree>`_
 and install it in place::
 
