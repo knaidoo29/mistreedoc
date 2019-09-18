@@ -2,6 +2,8 @@
 Minimum Spanning Tree
 =====================
 
+An ipython notebook version of this tutorial can be found `here <https://github.com/knaidoo29/mistree/tree/master/tutorials/notebooks>`_.
+
 Tutorials
 =========
 
@@ -289,7 +291,7 @@ the counts are small.
 Plotting
 ^^^^^^^^
 
-For the following plots we will change the matplotlib font using:
+For the following plots we will change the default matplotlib font using:
 
 .. code-block:: python
 

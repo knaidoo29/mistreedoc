@@ -2,6 +2,8 @@
 Lévy Flight
 ===========
 
+An ipython notebook version of this tutorial can be found `here <https://github.com/knaidoo29/mistree/tree/master/tutorials/notebooks>`_.
+
 Tutorial
 ========
 
@@ -337,7 +339,7 @@ The PDF is thus defined as:
     :nowrap:
 
     \begin{equation*}
-    CDF(t) = \left\{ \begin{array}{lcl}
+    PDF(t) = \left\{ \begin{array}{lcl}
     0  & \mbox{for} & t < t_{s} \\
     \frac{\beta\gamma t}{(t-t_{s})}\left(\frac{t-t_{s}}{t_{0}-t_{s}}\right)^{\gamma}& \mbox{for} & t_{s} < t < t_{0}\\
     \frac{\alpha(1-\beta)}{t_{0}}t^{-(1+\alpha)} & \mbox{for} & t\geq t_{0}
