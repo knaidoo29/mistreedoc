@@ -147,16 +147,52 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="introduction">
+  <table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="73%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Author</td>
+<td>Krishna Naidoo</td>
+</tr>
+<tr class="row-even"><td>Version</td>
+<td>1.2.1</td>
+</tr>
+<tr class="row-odd"><td>Homepage</td>
+<td><a class="reference external" href="https://github.com/knaidoo29/mistree">https://github.com/knaidoo29/mistree</a></td>
+</tr>
+<tr class="row-even"><td>Documentation</td>
+<td><a class="reference external" href="https://knaidoo29.github.io/mistreedoc/">https://knaidoo29.github.io/mistreedoc/</a></td>
+</tr>
+</tbody>
+</table>
+<a class="reference external image-reference" href="https://travis-ci.org/knaidoo29/mistree"><img alt="https://travis-ci.org/knaidoo29/mistree.svg?branch=master" src="https://travis-ci.org/knaidoo29/mistree.svg?branch=master" /></a>
+<a class="reference external image-reference" href="https://codecov.io/gh/knaidoo29/mistree"><img alt="https://codecov.io/gh/knaidoo29/mistree/branch/master/graph/badge.svg" src="https://codecov.io/gh/knaidoo29/mistree/branch/master/graph/badge.svg" /></a>
+<a class="reference external image-reference" href="https://badge.fury.io/py/mistree"><img alt="https://badge.fury.io/py/mistree.svg" src="https://badge.fury.io/py/mistree.svg" /></a>
+<a class="reference external image-reference" href="https://joss.theoj.org/papers/461d79e9e5faf21029c0a7b1c928be28"><img alt="https://joss.theoj.org/papers/461d79e9e5faf21029c0a7b1c928be28/status.svg" src="https://joss.theoj.org/papers/461d79e9e5faf21029c0a7b1c928be28/status.svg" /></a>
+<a class="reference external image-reference" href="https://zenodo.org/badge/latestdoi/170473458"><img alt="https://zenodo.org/badge/170473458.svg" src="https://zenodo.org/badge/170473458.svg" /></a>
+<a class="reference external image-reference" href="https://opensource.org/licenses/MIT"><img alt="https://img.shields.io/badge/License-MIT-blue.svg" src="https://img.shields.io/badge/License-MIT-blue.svg" /></a>
+<p><br></p>
+<div class="section" id="introduction">
 <h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
-<p>MiSTree is designed with the intent of being an easy to use minimum spanning tree
-library. The methods and statistics used in the module are discussed in the paper
-<strong>“Beyond two-point statistics: using the Minimum Spanning Tree as a tool for cosmology”</strong>
-[ArXiv=1907.00989] which can be found <a class="reference external" href="https://arxiv.org/abs/1907.00989">here</a>.</p>
+<p>The Minimum Spanning Tree (MST) has been used in a broad range of scientific
+research including computer science, epidemiology, social sciences, particle
+physics, astronomy and cosmology. Its success in these field has been driven
+by its sensitivity to the spatial distribution of points and the patterns within.
+MiSTree, a public Python package, allows a user to construct the MST in a variety
+of coordinates systems, including Celestial coordinates used in astronomy. The package enables
+the MST to be constructed quickly by initially using a k-nearest neighbour graph
+(rather than a matrix of pairwise distances) which is then fed to Kruskal’s
+algorithm to construct the MST. MiSTree enables a user to measure the statistics
+of the MST and provides classes for binning the MST statistics (into histograms)
+and plotting the distributions. Including the MST in parameter estimation studies
+will enable the inclusion of high-order statistics that are often difficult and
+computationally expensive, particularly on large data sets, to compute.</p>
 </div>
 <div class="section" id="dependencies">
 <h1>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h1>
-<p>MiSTree will work on Python 2.7 or 3.5+ and requires the following Python modules:</p>
+<p>MiSTree will work on Python 2.7 or 3.4+ and requires the following Python modules:</p>
 <ul class="simple">
 <li><a class="reference external" href="http://www.numpy.org/">numpy</a></li>
 <li><a class="reference external" href="https://matplotlib.org">matplotlib</a></li>
@@ -183,6 +219,12 @@ and install it in place:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">mistree</span> <span class="kn">as</span> <span class="nn">mist</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="support">
+<h1>Support<a class="headerlink" href="#support" title="Permalink to this headline">¶</a></h1>
+<p>If you have any issues with the code or want to suggest ways to improve it please
+open a new issue (<a class="reference external" href="https://github.com/knaidoo29/mistree/issues">here</a>)
+or (if you don’t have a github account) email <a class="reference external" href="mailto:krishna&#46;naidoo&#46;11&#37;&#52;&#48;ucl&#46;ac&#46;uk">krishna<span>&#46;</span>naidoo<span>&#46;</span>11<span>&#64;</span>ucl<span>&#46;</span>ac<span>&#46;</span>uk</a>.</p>
 </div>
 <div class="section" id="contents">
 <h1>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h1>
@@ -264,14 +306,6 @@ and install it in place:</p>
 <li>Added binning (<code class="docutils literal notranslate"><span class="pre">HistMST</span></code>) and plotting (<code class="docutils literal notranslate"><span class="pre">PlotHistMST</span></code>) classes for handling the MST statistics.</li>
 </ul>
 </div></blockquote>
-</div>
-<div class="section" id="support">
-<h1>Support<a class="headerlink" href="#support" title="Permalink to this headline">¶</a></h1>
-<p>If you have any issues with the code or would like to suggest ways of improving
-it, feel free to e-mail:</p>
-<ul class="simple">
-<li><a class="reference external" href="mailto:krishna&#46;naidoo&#46;11&#37;&#52;&#48;ucl&#46;ac&#46;uk">krishna<span>&#46;</span>naidoo<span>&#46;</span>11<span>&#64;</span>ucl<span>&#46;</span>ac<span>&#46;</span>uk</a></li>
-</ul>
 </div>
 
 

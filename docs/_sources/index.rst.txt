@@ -1,15 +1,54 @@
+
++---------------+-----------------------------------------+
+| Author        | Krishna Naidoo                          |
++---------------+-----------------------------------------+
+| Version       | 1.2.1                                   |
++---------------+-----------------------------------------+
+| Homepage      | https://github.com/knaidoo29/mistree    |
++---------------+-----------------------------------------+
+| Documentation | https://knaidoo29.github.io/mistreedoc/ |
++---------------+-----------------------------------------+
+
+.. |br| raw:: html
+
+        <br>
+
+.. image:: https://travis-ci.org/knaidoo29/mistree.svg?branch=master
+    :target: https://travis-ci.org/knaidoo29/mistree
+.. image:: https://codecov.io/gh/knaidoo29/mistree/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/knaidoo29/mistree
+.. image:: https://badge.fury.io/py/mistree.svg
+    :target: https://badge.fury.io/py/mistree
+.. image:: https://joss.theoj.org/papers/461d79e9e5faf21029c0a7b1c928be28/status.svg
+    :target: https://joss.theoj.org/papers/461d79e9e5faf21029c0a7b1c928be28
+.. image:: https://zenodo.org/badge/170473458.svg
+    :target: https://zenodo.org/badge/latestdoi/170473458
+.. image:: https://img.shields.io/badge/License-MIT-blue.svg
+    :target: https://opensource.org/licenses/MIT
+
+|br|
+
 Introduction
 ------------
 
-MiSTree is designed with the intent of being an easy to use minimum spanning tree
-library. The methods and statistics used in the module are discussed in the paper
-**"Beyond two-point statistics: using the Minimum Spanning Tree as a tool for cosmology"**
-[ArXiv=1907.00989] which can be found `here <https://arxiv.org/abs/1907.00989>`_.
+The Minimum Spanning Tree (MST) has been used in a broad range of scientific
+research including computer science, epidemiology, social sciences, particle
+physics, astronomy and cosmology. Its success in these field has been driven
+by its sensitivity to the spatial distribution of points and the patterns within.
+MiSTree, a public Python package, allows a user to construct the MST in a variety
+of coordinates systems, including Celestial coordinates used in astronomy. The package enables
+the MST to be constructed quickly by initially using a k-nearest neighbour graph
+(rather than a matrix of pairwise distances) which is then fed to Kruskal's
+algorithm to construct the MST. MiSTree enables a user to measure the statistics
+of the MST and provides classes for binning the MST statistics (into histograms)
+and plotting the distributions. Including the MST in parameter estimation studies
+will enable the inclusion of high-order statistics that are often difficult and
+computationally expensive, particularly on large data sets, to compute.
 
 Dependencies
 ------------
 
-MiSTree will work on Python 2.7 or 3.5+ and requires the following Python modules:
+MiSTree will work on Python 2.7 or 3.4+ and requires the following Python modules:
 
 * `numpy <http://www.numpy.org/>`_
 * `matplotlib <https://matplotlib.org>`_
@@ -37,6 +76,14 @@ Once this is done you should be able to call MiSTree from python:
 .. code-block:: python
 
     import mistree as mist
+
+
+Support
+-------
+
+If you have any issues with the code or want to suggest ways to improve it please
+open a new issue (`here <https://github.com/knaidoo29/mistree/issues>`_)
+or (if you don't have a github account) email krishna.naidoo.11@ucl.ac.uk.
 
 Contents
 --------
@@ -71,11 +118,3 @@ Version History
 **Version 1.1**:
 
     * Added binning (``HistMST``) and plotting (``PlotHistMST``) classes for handling the MST statistics.
-
-Support
--------
-
-If you have any issues with the code or would like to suggest ways of improving
-it, feel free to e-mail:
-
-- krishna.naidoo.11@ucl.ac.uk
