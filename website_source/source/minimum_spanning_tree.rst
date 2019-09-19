@@ -2,7 +2,10 @@
 Minimum Spanning Tree
 =====================
 
-An ipython notebook version of this tutorial can be found `here <https://github.com/knaidoo29/mistree/tree/master/tutorials/notebooks>`_.
+An ipython notebook version of this tutorial can be found
+`here <https://github.com/knaidoo29/mistree/tree/master/tutorials/notebooks>`_
+(see `here <https://mybinder.org/v2/gh/knaidoo29/mistree/master?filepath=tutorials%2Fnotebooks%2F>`_
+to run an online version).
 
 Tutorials
 =========
