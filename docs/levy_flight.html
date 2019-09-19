@@ -86,12 +86,12 @@
 <li class="toctree-l2"><a class="reference internal" href="#tutorial">Tutorial</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#d-vs-3d">2D vs 3D</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#d">2D</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id2">3D</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">3D</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#periodic-boundary">Periodic boundary</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#random-walk-models">Random Walk Models</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id3">Lévy Flight</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Lévy Flight</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#adjusted-levy-flight">Adjusted Lévy Flight</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#other-random-walk">Other Random Walk</a></li>
 </ul>
@@ -170,8 +170,7 @@
 <h1>Lévy Flight<a class="headerlink" href="#levy-flight" title="Permalink to this headline">¶</a></h1>
 <p>An ipython notebook version of this tutorial can be found
 <a class="reference external" href="https://github.com/knaidoo29/mistree/tree/master/tutorials/notebooks">here</a>
-(see <a class="reference external" href="https://mybinder.org/v2/gh/knaidoo29/mistree/master?filepath=tutorials%2Fnotebooks%2F">here</a>
-to run an online version).</p>
+(for an online version see <a class="reference external" href="https://mybinder.org/v2/gh/knaidoo29/mistree/master?filepath=tutorials%2Fnotebooks%2F">binder</a> ).</p>
 <div class="section" id="tutorial">
 <h2>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h2>
 <p>Random walk distributions draw step sizes randomly from a given probability
@@ -217,8 +216,8 @@ random distribution!</p>
 </div>
 <a class="reference internal image-reference" href="_images/2D_example.png"><img alt="_images/2D_example.png" class="align-center" src="_images/2D_example.png" style="width: 450.0px; height: 450.0px;" /></a>
 </div>
-<div class="section" id="id2">
-<h4>3D<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id1">
+<h4>3D<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
 <p>Creating a 3D distribution is even easier, since this is the default setting for
 all the random walk functions. Like before we again specify the <code class="docutils literal notranslate"><span class="pre">size</span></code> and generate
 the distribution in the following way:</p>
@@ -298,8 +297,8 @@ these functions interact with the function <code class="docutils literal notrans
 to generate a random walk with your own specified probability distribution function
 (PDF). Below we will explain in detail how these distributions work and what the
 parameters do in each model.</p>
-<div class="section" id="id3">
-<h4>Lévy Flight<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id2">
+<h4>Lévy Flight<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
 <p>Lévy flights are defined with a power law PDF and a cumulative distribution
 function (CDF) given by,</p>
 <div class="math">
