@@ -46,6 +46,8 @@ MiSTree will work on Python 2.7 or 3.4+ and requires the following Python module
 * `scikit-learn <http://scikit-learn.org/stable/>`_
 * `f2py <https://docs.scipy.org/doc/numpy/f2py/>`_ (should be installed with numpy)
 
+For testing you will require `nose <https://nose.readthedocs.io/en/latest/>`_ or `pytest <http://pytest.org/en/latest/>`_ .
+
 Installation
 ------------
 
