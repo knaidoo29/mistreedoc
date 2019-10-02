@@ -78,7 +78,7 @@ the distribution in the following way:
     size = 50000
     x, y, z = mist.get_levy_flight(size)
 
-We plot the 3 dimensions across 3 plains: X vs Y, X vs Z and Z vs Y:
+We plot the 3 dimensions across 3 planes: X vs Y, X vs Z and Z vs Y:
 
 .. code-block:: python
 
