@@ -61,12 +61,19 @@ and install it in place::
     cd mistree
     pip install -e . [--user]
 
+From the ``mistree`` directory you can then test the install using ``nose``::
+
+    python setup.py test
+
+or using ``pytest``::
+
+    python -m pytest
+
 Once this is done you should be able to call MiSTree from python:
 
 .. code-block:: python
 
     import mistree as mist
-
 
 Support
 -------
