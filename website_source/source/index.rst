@@ -2,7 +2,7 @@
 +---------------+-----------------------------------------+
 | Author        | Krishna Naidoo                          |
 +---------------+-----------------------------------------+
-| Version       | 1.1.3                                   |
+| Version       | 1.2.0                                   |
 +---------------+-----------------------------------------+
 | Homepage      | https://github.com/knaidoo29/mistree    |
 +---------------+-----------------------------------------+
@@ -117,3 +117,7 @@ Version History
 **Version 1.1**:
 
     * Added binning (``HistMST``) and plotting (``PlotHistMST``) classes for handling the MST statistics.
+
+**Version 1.2**:
+
+    * Added automated testing routines which can be executed using `nose` or `pytest`.

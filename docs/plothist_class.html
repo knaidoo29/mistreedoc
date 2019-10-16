@@ -200,7 +200,7 @@
 
 <dl class="function">
 <dt id="PlotHistMST.plot">
-<code class="descname">plot</code><span class="sig-paren">(</span><em>[usebox=True, saveas=None, fontsize=16, figsize=(16, 4), units=None, showenvelopes=True, usecomp=True, usemean=False, heigh_ratios=[2, 1], usefraction=True, whichcomp=0, plotzeroline=True, legend=True, subplot_adjust_top=0.85, legend_fontsize=14, legend_column=4, xlabels=[None, None, None, None]]</em><span class="sig-paren">)</span><a class="headerlink" href="#PlotHistMST.plot" title="Permalink to this definition">¶</a></dt>
+<code class="descname">plot</code><span class="sig-paren">(</span><em>[usebox=True, saveas=None, fontsize=16, figsize=(16, 4), subplot_setup='4x1', units=None, showenvelopes=True, showsigma=2, usecomp=True, usemean=False, heigh_ratios=[2, 1], usefraction=True, whichcomp=0, plotzeroline=True, legend=True, subplot_adjust_top=0.85, legend_fontsize=14, legend_column=4, xlabels=[None, None, None, None], dpi=None, plt_output='show']</em><span class="sig-paren">)</span><a class="headerlink" href="#PlotHistMST.plot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Outputs the final plot of the MST statistics.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -211,8 +211,10 @@
 <li><strong>saveas</strong> (<em>str</em>) – If not None, this will save the plot with the name provided.</li>
 <li><strong>fontsize</strong> (<em>int</em>) – Fontsize of axis labels.</li>
 <li><strong>figsize</strong> (<em>tuple</em>) – Dimensions of the figure.</li>
+<li><strong>subplot_setup</strong> (<em>str</em>) – Subplot setup: ‘4x1’ or ‘2x2’.</li>
 <li><strong>units</strong> (<em>str</em>) – Units of l and b MST statistics, if None is supplied then we assume it is unitless.</li>
 <li><strong>showenvelopes</strong> (<em>bool</em>) – This determines whether to plot data with input standard deviation.</li>
+<li><strong>showsigma</strong> (<em>int</em>) – Number of sigma errorbars to plot.</li>
 <li><strong>usecomp</strong> (<em>bool</em>) – Determines whether to include comparison subplots.</li>
 <li><strong>usemean</strong> (<em>bool</em>) – For comparison plots, the determines whether to use the mean of input distributions.</li>
 <li><strong>height_ratios</strong> (<em>tuple</em>) – Height ratio between main plots and comparison plots.</li>
@@ -224,6 +226,8 @@
 <li><strong>legend_fontsize</strong> (<em>int</em>) – Size of legend text.</li>
 <li><strong>legend_column</strong> (<em>int</em>) – Number of keys in each line of the legend.</li>
 <li><strong>xlabels</strong> (<em>list</em>) – List of string labels to replace the default if not set to None.</li>
+<li><strong>dpi</strong> (<em>int</em>) – Pixels per inch for non-vector images.</li>
+<li><strong>plt_output</strong> (<em>str</em>) – output type: ‘closed’ or ‘show’</li>
 </ul>
 </td>
 </tr>
