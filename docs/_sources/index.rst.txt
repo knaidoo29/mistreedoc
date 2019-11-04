@@ -27,6 +27,8 @@
     :target: https://opensource.org/licenses/MIT
 .. image:: https://mybinder.org/badge_logo.svg
     :target: https://mybinder.org/v2/gh/knaidoo29/mistree/master?filepath=tutorials%2Fnotebooks%2F
+.. image:: https://img.shields.io/badge/ascl-1910.016-blue.svg?colorB=262255
+    :target: http://ascl.net/1910.016
 
 |br|
 
@@ -76,6 +78,25 @@ Once this is done you should be able to call MiSTree from python:
 .. code-block:: python
 
     import mistree as mist
+
+Citing
+------
+
+You can cite ``MiSTree`` using the following BibTex::
+
+    @ARTICLE{Naidoo2019,
+             author = {{Naidoo}, Krishna},
+             title = "{MiSTree: a Python package for constructing and analysing Minimum Spanning Trees}",
+             journal = {The Journal of Open Source Software},
+             year = "2019",
+             month = "Oct",
+             volume = {4},
+             number = {42},
+             eid = {1721},
+             pages = {1721},
+             doi = {10.21105/joss.01721},
+             adsurl = {https://ui.adsabs.harvard.edu/abs/2019JOSS....4.1721N}
+    }
 
 Support
 -------
