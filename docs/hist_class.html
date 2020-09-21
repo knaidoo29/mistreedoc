@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,39 +11,43 @@
   
 
   
-  
-  
-  
-
-  
-
-  
-  
-    
-
-  
-
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="PlotHistMST" href="plothist_class.html" />
     <link rel="prev" title="GetMST" href="basic_class.html" /> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -74,6 +77,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -108,6 +112,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -146,7 +151,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html">Docs</a> &raquo;</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="minimum_spanning_tree.html">Minimum Spanning Tree</a> &raquo;</li>
         
@@ -171,91 +176,80 @@
             
   <div class="section" id="histmst">
 <h1>HistMST<a class="headerlink" href="#histmst" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<dl class="py class">
 <dt id="HistMST">
-<em class="property">class </em><code class="descname">HistMST</code><a class="headerlink" href="#HistMST" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">HistMST</code><a class="headerlink" href="#HistMST" title="Permalink to this definition">¶</a></dt>
 <dd><p>A class for binning the default MST statistics which are then stored in a dictionary.</p>
-<dl class="function">
+<dl class="py function">
 <dt id="HistMST.setup">
-<code class="descname">setup</code><span class="sig-paren">(</span><span class="optional">[</span><em>uselog=False</em>, <em>use_sqrt_s=True</em>, <em>usenorm=True</em>, <em>d_min=0.5</em>, <em>d_max=6.5</em>, <em>num_d_bins=6</em>, <em>l_min=0.</em>, <em>l_max=None</em>, <em>num_l_bins=100</em>, <em>b_min=0.</em>, <em>b_max=None</em>, <em>num_b_bins=100</em>, <em>s_min=0.</em>, <em>s_max=1.</em>, <em>num_s_bins=50</em>, <em>logl_min=None</em>, <em>logl_max=None</em>, <em>logb_min=None</em>, <em>logb_max=None</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#HistMST.setup" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">setup</code><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param">uselog=False</em>, <em class="sig-param">use_sqrt_s=True</em>, <em class="sig-param">usenorm=True</em>, <em class="sig-param">d_min=0.5</em>, <em class="sig-param">d_max=6.5</em>, <em class="sig-param">num_d_bins=6</em>, <em class="sig-param">l_min=0.</em>, <em class="sig-param">l_max=None</em>, <em class="sig-param">num_l_bins=100</em>, <em class="sig-param">b_min=0.</em>, <em class="sig-param">b_max=None</em>, <em class="sig-param">num_b_bins=100</em>, <em class="sig-param">s_min=0.</em>, <em class="sig-param">s_max=1.</em>, <em class="sig-param">num_s_bins=50</em>, <em class="sig-param">logl_min=None</em>, <em class="sig-param">logl_max=None</em>, <em class="sig-param">logb_min=None</em>, <em class="sig-param">logb_max=None</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#HistMST.setup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Setups bin sizes for the MST statistics.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>uselog</strong> (<em>bool</em>) – Determines whether to use log bins for l and b.</li>
-<li><strong>use_sqrt_s</strong> (<em>bool</em>) – Determines whether to use the sqrt(1-s) projection of s or just s itself.</li>
-<li><strong>usenorm</strong> (<em>bool</em>) – Determines whether to normalise the histograms.</li>
-<li><strong>d_min</strong> (<em>float</em>) – Minimum for degree bins (use half integer values).</li>
-<li><strong>d_max</strong> (<em>float</em>) – Maximum for degree bins (use half integer values).</li>
-<li><strong>num_d_bins</strong> (<em>int</em>) – Number of bins for the distribution of degree, this should be equal to d_max - d_min.</li>
-<li><strong>l_min</strong> (<em>float</em>) – Minimum for edge length bins.</li>
-<li><strong>l_max</strong> (<em>float</em>) – Maximum for edge length bins.</li>
-<li><strong>num_l_bins</strong> (<em>int</em>) – Number of bins for the distribution of edge lengths.</li>
-<li><strong>b_min</strong> (<em>float</em>) – Minimum for branch length bins.</li>
-<li><strong>b_max</strong> (<em>float</em>) – Maximum for branch length bins.</li>
-<li><strong>num_b_bins</strong> (<em>int</em>) – Number of bins for the distribution of branch lengths.</li>
-<li><strong>s_min</strong> (<em>float</em>) – Minimum for branch shape bins.</li>
-<li><strong>s_max</strong> (<em>float</em>) – Maximum for branch shape bins.</li>
-<li><strong>num_s_bins</strong> (<em>int</em>) – Number of bins for the distribution of branch shapes.</li>
-<li><strong>logl_min</strong> (<em>float</em>) – Minimum of edge lengths in log to base 10.</li>
-<li><strong>logl_max</strong> (<em>float</em>) – Maximum of edge lengths in log to base 10.</li>
-<li><strong>logb_min</strong> (<em>float</em>) – Minimum of branch lengths in log to base 10.</li>
-<li><strong>logb_max</strong> (<em>float</em>) – Maximum of branch lengths in log to base 10.</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>uselog</strong> (<em>bool</em>) – Determines whether to use log bins for l and b.</p></li>
+<li><p><strong>use_sqrt_s</strong> (<em>bool</em>) – Determines whether to use the sqrt(1-s) projection of s or just s itself.</p></li>
+<li><p><strong>usenorm</strong> (<em>bool</em>) – Determines whether to normalise the histograms.</p></li>
+<li><p><strong>d_min</strong> (<em>float</em>) – Minimum for degree bins (use half integer values).</p></li>
+<li><p><strong>d_max</strong> (<em>float</em>) – Maximum for degree bins (use half integer values).</p></li>
+<li><p><strong>num_d_bins</strong> (<em>int</em>) – Number of bins for the distribution of degree, this should be equal to d_max - d_min.</p></li>
+<li><p><strong>l_min</strong> (<em>float</em>) – Minimum for edge length bins.</p></li>
+<li><p><strong>l_max</strong> (<em>float</em>) – Maximum for edge length bins.</p></li>
+<li><p><strong>num_l_bins</strong> (<em>int</em>) – Number of bins for the distribution of edge lengths.</p></li>
+<li><p><strong>b_min</strong> (<em>float</em>) – Minimum for branch length bins.</p></li>
+<li><p><strong>b_max</strong> (<em>float</em>) – Maximum for branch length bins.</p></li>
+<li><p><strong>num_b_bins</strong> (<em>int</em>) – Number of bins for the distribution of branch lengths.</p></li>
+<li><p><strong>s_min</strong> (<em>float</em>) – Minimum for branch shape bins.</p></li>
+<li><p><strong>s_max</strong> (<em>float</em>) – Maximum for branch shape bins.</p></li>
+<li><p><strong>num_s_bins</strong> (<em>int</em>) – Number of bins for the distribution of branch shapes.</p></li>
+<li><p><strong>logl_min</strong> (<em>float</em>) – Minimum of edge lengths in log to base 10.</p></li>
+<li><p><strong>logl_max</strong> (<em>float</em>) – Maximum of edge lengths in log to base 10.</p></li>
+<li><p><strong>logb_min</strong> (<em>float</em>) – Minimum of branch lengths in log to base 10.</p></li>
+<li><p><strong>logb_max</strong> (<em>float</em>) – Maximum of branch lengths in log to base 10.</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="HistMST.get_hist">
-<code class="descname">get_hist</code><span class="sig-paren">(</span><em>d</em>, <em>l</em>, <em>b</em>, <em>s</em><span class="sig-paren">)</span><a class="headerlink" href="#HistMST.get_hist" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_hist</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">d</span></em>, <em class="sig-param"><span class="n">l</span></em>, <em class="sig-param"><span class="n">b</span></em>, <em class="sig-param"><span class="n">s</span></em><span class="sig-paren">)</span><a class="headerlink" href="#HistMST.get_hist" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bins the MST distribution which is returned as a dictionary.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>d</strong> (<em>array</em>) – Distribution of degree.</li>
-<li><strong>l</strong> (<em>array</em>) – Distribution of edge length.</li>
-<li><strong>b</strong> (<em>array</em>) – Distribution of branch length.</li>
-<li><strong>s</strong> (<em>array</em>) – Distribution of branch shape.</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>d</strong> (<em>array</em>) – Distribution of degree.</p></li>
+<li><p><strong>l</strong> (<em>array</em>) – Distribution of edge length.</p></li>
+<li><p><strong>b</strong> (<em>array</em>) – Distribution of branch length.</p></li>
+<li><p><strong>s</strong> (<em>array</em>) – Distribution of branch shape.</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>mst_hist</strong> <em>(dict)</em>: Dictionary of MST binned histograms.</p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>mst_hist</strong> <em>(dict)</em>: Dictionary of MST binned histograms.</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="HistMST.start_group">
-<code class="descname">start_group</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#HistMST.start_group" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">start_group</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#HistMST.start_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Begins group mode for calculating the mean and standard deviation of the MST from different realisations of data points coming from the same model.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="HistMST.end_group">
-<code class="descname">end_group</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#HistMST.end_group" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">end_group</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#HistMST.end_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Ends group mode for calculating the mean and standard deviation of the MST.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>mst_hist</strong> <em>(dict)</em>: Dictionary of the mean and standard deviation of the MST binned histograms.</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>mst_hist</strong> <em>(dict)</em>: Dictionary of the mean and standard deviation of the MST binned histograms.</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="HistMST.clean">
-<code class="descname">clean</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#HistMST.clean" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">clean</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#HistMST.clean" title="Permalink to this definition">¶</a></dt>
 <dd><p>Resets HistMST variables.</p>
 </dd></dl>
 
@@ -274,7 +268,7 @@
         <a href="plothist_class.html" class="btn btn-neutral float-right" title="PlotHistMST" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="basic_class.html" class="btn btn-neutral" title="GetMST" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="basic_class.html" class="btn btn-neutral float-left" title="GetMST" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -283,11 +277,19 @@
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2019, Krishna Naidoo
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -299,26 +301,16 @@
   </div>
   
 
-
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

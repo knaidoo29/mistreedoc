@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,38 +11,42 @@
   
 
   
-  
-  
-  
-
-  
-
-  
-  
-    
-
-  
-
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="tomo" href="mst_tomo.html" /> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -73,6 +76,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -107,6 +111,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -145,7 +150,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html">Docs</a> &raquo;</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="minimum_spanning_tree.html">Minimum Spanning Tree</a> &raquo;</li>
         
@@ -170,87 +175,72 @@
             
   <div class="section" id="plotting">
 <h1>plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">¶</a></h1>
-<dl class="function">
+<dl class="py function">
 <dt id="set_plot_default">
-<code class="descname">set_plot_default</code><span class="sig-paren">(</span><span class="optional">[</span><em>use_bold=True</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#set_plot_default" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_plot_default</code><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param">use_bold=True</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#set_plot_default" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the default fonts for the matplotlib plots.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>use_bold</strong> (<em>bool</em>) – Determines whether the fonts used are in bold.</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>use_bold</strong> (<em>bool</em>) – Determines whether the fonts used are in bold.</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="plot_histogram_line">
-<code class="descname">plot_histogram_line</code><span class="sig-paren">(</span><em>x_min</em>, <em>histogram</em><span class="optional">[</span>, <em>x_edges=None</em>, <em>ax=None</em>, <em>color='C0'</em>, <em>alpha=1.</em>, <em>linewidth=1.</em>, <em>linestyle='-'</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#plot_histogram_line" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">plot_histogram_line</code><span class="sig-paren">(</span><em class="sig-param">x_min</em>, <em class="sig-param">histogram</em><span class="optional">[</span>, <em class="sig-param">x_edges=None</em>, <em class="sig-param">ax=None</em>, <em class="sig-param">color='C0'</em>, <em class="sig-param">alpha=1.</em>, <em class="sig-param">linewidth=1.</em>, <em class="sig-param">linestyle='-'</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#plot_histogram_line" title="Permalink to this definition">¶</a></dt>
 <dd><p>Outputs the histogram line boxes without using the histogram function.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>x_mid</strong> (<em>array</em>) – Midpoint of each histogram bar.</li>
-<li><strong>histogram</strong> (<em>array</em>) – Histogram height.</li>
-<li><strong>x_edges</strong> (<em>array</em>) – The edges of each histogram bar. Ideal for unequal spacings between histograms.</li>
-<li><strong>ax</strong> (<em>class</em>) – The matplotlib plotting axis.</li>
-<li><strong>color</strong> (<em>str</em>) – The color of the histogram error plot.</li>
-<li><strong>alpha</strong> (<em>float</em>) – The transparency fraction of the histogram error plot.</li>
-<li><strong>linewidth</strong> (<em>float</em>) – The linewidth of histogram line.</li>
-<li><strong>linestyle</strong> (<em>str</em>) – The linestyle used.</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x_mid</strong> (<em>array</em>) – Midpoint of each histogram bar.</p></li>
+<li><p><strong>histogram</strong> (<em>array</em>) – Histogram height.</p></li>
+<li><p><strong>x_edges</strong> (<em>array</em>) – The edges of each histogram bar. Ideal for unequal spacings between histograms.</p></li>
+<li><p><strong>ax</strong> (<em>class</em>) – The matplotlib plotting axis.</p></li>
+<li><p><strong>color</strong> (<em>str</em>) – The color of the histogram error plot.</p></li>
+<li><p><strong>alpha</strong> (<em>float</em>) – The transparency fraction of the histogram error plot.</p></li>
+<li><p><strong>linewidth</strong> (<em>float</em>) – The linewidth of histogram line.</p></li>
+<li><p><strong>linestyle</strong> (<em>str</em>) – The linestyle used.</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="plot_histogram_confidence">
-<code class="descname">plot_histogram_confidence</code><span class="sig-paren">(</span><em>x_mid</em>, <em>histogram_min</em>, <em>histogram_max</em><span class="optional">[</span>, <em>x_edges=None</em>, <em>ax=None</em>, <em>color='C0'</em>, <em>alpha=0.25</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#plot_histogram_confidence" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">plot_histogram_confidence</code><span class="sig-paren">(</span><em class="sig-param">x_mid</em>, <em class="sig-param">histogram_min</em>, <em class="sig-param">histogram_max</em><span class="optional">[</span>, <em class="sig-param">x_edges=None</em>, <em class="sig-param">ax=None</em>, <em class="sig-param">color='C0'</em>, <em class="sig-param">alpha=0.25</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#plot_histogram_confidence" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plots the confidence envelopes for a histogram.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>x_mid</strong> (<em>array</em>) – Midpoint of each histogram bar.</li>
-<li><strong>histogram_min</strong> (<em>array</em>) – Histogram minimum envelope.</li>
-<li><strong>histogram_max</strong> (<em>array</em>) – Histogram maximum envelope.</li>
-<li><strong>x_edges</strong> (<em>array</em>) – The edges of each histogram bar. Ideal for unequal spacings between histograms.</li>
-<li><strong>ax</strong> (<em>class</em>) – The matplotlib plotting axis.</li>
-<li><strong>color</strong> (<em>str</em>) – The color of the histogram error plot.</li>
-<li><strong>alpha</strong> (<em>float</em>) – The transparency fraction of the histogram error plot.</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x_mid</strong> (<em>array</em>) – Midpoint of each histogram bar.</p></li>
+<li><p><strong>histogram_min</strong> (<em>array</em>) – Histogram minimum envelope.</p></li>
+<li><p><strong>histogram_max</strong> (<em>array</em>) – Histogram maximum envelope.</p></li>
+<li><p><strong>x_edges</strong> (<em>array</em>) – The edges of each histogram bar. Ideal for unequal spacings between histograms.</p></li>
+<li><p><strong>ax</strong> (<em>class</em>) – The matplotlib plotting axis.</p></li>
+<li><p><strong>color</strong> (<em>str</em>) – The color of the histogram error plot.</p></li>
+<li><p><strong>alpha</strong> (<em>float</em>) – The transparency fraction of the histogram error plot.</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="plot_histogram_error">
-<code class="descname">plot_histogram_error</code><span class="sig-paren">(</span><em>x_mid</em>, <em>histogram</em>, <em>histogram_error</em><span class="optional">[</span>, <em>x_edges=None</em>, <em>ax=None</em>, <em>color='C0'</em>, <em>alpha=0.25</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#plot_histogram_error" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>x_mid</strong> (<em>array</em>) – Midpoint of each histogram bar.</li>
-<li><strong>histogram</strong> (<em>array</em>) – Histogram.</li>
-<li><strong>histogram_error</strong> (<em>array</em>) – The error associated to each histogram bar.</li>
-<li><strong>x_edges</strong> (<em>array</em>) – The edges of each histogram bar. Ideal for unequal spacings between histograms.</li>
-<li><strong>ax</strong> (<em>class</em>) – The matplotlib plotting axis.</li>
-<li><strong>color</strong> (<em>str</em>) – The color of the histogram error plot.</li>
-<li><strong>alpha</strong> (<em>float</em>) – The transparency fraction of the histogram error plot.</li>
+<code class="sig-name descname">plot_histogram_error</code><span class="sig-paren">(</span><em class="sig-param">x_mid</em>, <em class="sig-param">histogram</em>, <em class="sig-param">histogram_error</em><span class="optional">[</span>, <em class="sig-param">x_edges=None</em>, <em class="sig-param">ax=None</em>, <em class="sig-param">color='C0'</em>, <em class="sig-param">alpha=0.25</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#plot_histogram_error" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x_mid</strong> (<em>array</em>) – Midpoint of each histogram bar.</p></li>
+<li><p><strong>histogram</strong> (<em>array</em>) – Histogram.</p></li>
+<li><p><strong>histogram_error</strong> (<em>array</em>) – The error associated to each histogram bar.</p></li>
+<li><p><strong>x_edges</strong> (<em>array</em>) – The edges of each histogram bar. Ideal for unequal spacings between histograms.</p></li>
+<li><p><strong>ax</strong> (<em>class</em>) – The matplotlib plotting axis.</p></li>
+<li><p><strong>color</strong> (<em>str</em>) – The color of the histogram error plot.</p></li>
+<li><p><strong>alpha</strong> (<em>float</em>) – The transparency fraction of the histogram error plot.</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
@@ -264,7 +254,7 @@
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="mst_tomo.html" class="btn btn-neutral" title="tomo" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="mst_tomo.html" class="btn btn-neutral float-left" title="tomo" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -273,11 +263,19 @@
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2019, Krishna Naidoo
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -289,26 +287,16 @@
   </div>
   
 
-
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

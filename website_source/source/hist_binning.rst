@@ -6,18 +6,18 @@ binning
 
     Returns the (normalised) number count of a data set with values within defined bins.
 
-    :param data:
+    :param data: Data.
     :type data: array
-    :param minimum:
+    :param minimum: Minimum value for the histogram bins.
     :type minimum: float
-    :param maximum:
+    :param maximum: Maximum value for the histogram bins.
     :type maximum: float
-    :param bin_size:
+    :param bin_size: Size of the bins.
     :type bin_size: float
-    :param bin_number:
+    :param bin_number: Number of bins.
     :type bin_number: int
-    :param normalised:
-    :type normalised:
+    :param normalised: If ``True`` the histogram will be normalised.
+    :type normalised: bool
 
     :returns:
       * **bin_centres** *(array)*: The central value of each bin.

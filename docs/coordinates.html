@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,39 +11,43 @@
   
 
   
-  
-  
-  
-
-  
-
-  
-  
-    
-
-  
-
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="binning" href="hist_binning.html" />
     <link rel="prev" title="PlotHistMST" href="plothist_class.html" /> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -74,6 +77,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -108,6 +112,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -146,7 +151,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html">Docs</a> &raquo;</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="minimum_spanning_tree.html">Minimum Spanning Tree</a> &raquo;</li>
         
@@ -171,124 +176,106 @@
             
   <div class="section" id="coordinate-utility">
 <h1>coordinate_utility<a class="headerlink" href="#coordinate-utility" title="Permalink to this headline">¶</a></h1>
-<dl class="function">
+<dl class="py function">
 <dt id="spherical_2_cartesian">
-<code class="descname">spherical_2_cartesian</code><span class="sig-paren">(</span><em>r</em>, <em>phi</em>, <em>theta</em><span class="optional">[</span>, <em>units='degree'</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#spherical_2_cartesian" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">spherical_2_cartesian</code><span class="sig-paren">(</span><em class="sig-param">r</em>, <em class="sig-param">phi</em>, <em class="sig-param">theta</em><span class="optional">[</span>, <em class="sig-param">units='degree'</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#spherical_2_cartesian" title="Permalink to this definition">¶</a></dt>
 <dd><p>Converts spherical polar coordinates into cartesian coordinates.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>r</strong> (<em>array</em>) – Radial distance.</li>
-<li><strong>phi</strong> (<em>array</em>) – Longitudinal coordinates.</li>
-<li><strong>theta</strong> (<em>array</em>) – Latitude coordinates.</li>
-<li><strong>units</strong> (<em>str</em>) – Units of <code class="docutils literal notranslate"><span class="pre">phi</span></code> and <code class="docutils literal notranslate"><span class="pre">theta</span></code> given in either ‘degrees’ or ‘radians’.</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>r</strong> (<em>array</em>) – Radial distance.</p></li>
+<li><p><strong>phi</strong> (<em>array</em>) – Longitudinal coordinates.</p></li>
+<li><p><strong>theta</strong> (<em>array</em>) – Latitude coordinates.</p></li>
+<li><p><strong>units</strong> (<em>str</em>) – Units of <code class="docutils literal notranslate"><span class="pre">phi</span></code> and <code class="docutils literal notranslate"><span class="pre">theta</span></code> given in either ‘degrees’ or ‘radians’.</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>x, y, z</strong> <em>(array)</em> : cartesian coordinates.</p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>x, y, z</strong> <em>(array)</em> : cartesian coordinates.</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="celestial_2_cartesian">
-<code class="descname">celestial_2_cartesian</code><span class="sig-paren">(</span><em>r</em>, <em>ra</em>, <em>dec</em><span class="optional">[</span>, <em>units='degree'</em>, <em>output='both'</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#celestial_2_cartesian" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">celestial_2_cartesian</code><span class="sig-paren">(</span><em class="sig-param">r</em>, <em class="sig-param">ra</em>, <em class="sig-param">dec</em><span class="optional">[</span>, <em class="sig-param">units='degree'</em>, <em class="sig-param">output='both'</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#celestial_2_cartesian" title="Permalink to this definition">¶</a></dt>
 <dd><p>Converts celestial spherical polar coordinates into cartesian coordinates.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>r</strong> (<em>array</em>) – Radial distance.</li>
-<li><strong>ra</strong> (<em>array</em>) – Longitudinal celestial coordinates.</li>
-<li><strong>dec</strong> (<em>array</em>) – Latitudinal celestial coordinates.</li>
-<li><strong>units</strong> (<em>str</em>) – Units of <code class="docutils literal notranslate"><span class="pre">ra</span></code> and <code class="docutils literal notranslate"><span class="pre">dec</span></code> given in either ‘degrees’ or ‘radians’.</li>
-<li><strong>output</strong> (<em>str</em>) – ‘euclidean’ or ‘both’. Determines whether to output only the euclidean or both euclidean and spherical coordinates.</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>r</strong> (<em>array</em>) – Radial distance.</p></li>
+<li><p><strong>ra</strong> (<em>array</em>) – Longitudinal celestial coordinates.</p></li>
+<li><p><strong>dec</strong> (<em>array</em>) – Latitudinal celestial coordinates.</p></li>
+<li><p><strong>units</strong> (<em>str</em>) – Units of <code class="docutils literal notranslate"><span class="pre">ra</span></code> and <code class="docutils literal notranslate"><span class="pre">dec</span></code> given in either ‘degrees’ or ‘radians’.</p></li>
+<li><p><strong>output</strong> (<em>str</em>) – ‘euclidean’ or ‘both’. Determines whether to output only the euclidean or both euclidean and spherical coordinates.</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p>Returns tuple of either:</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><p>Returns tuple of either:</p>
 <ul class="simple">
-<li><strong>phi, theta</strong> <em>(array)</em> – spherical polar coordinates.</li>
-<li><strong>x, y, z</strong> <em>(array)</em> – cartesian coordinates.</li>
+<li><p><strong>phi, theta</strong> <em>(array)</em> – spherical polar coordinates.</p></li>
+<li><p><strong>x, y, z</strong> <em>(array)</em> – cartesian coordinates.</p></li>
 </ul>
 </p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="spherical_2_unit_sphere">
-<code class="descname">spherical_2_unit_sphere</code><span class="sig-paren">(</span><em>phi</em>, <em>theta</em><span class="optional">[</span>, <em>units='degrees'</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#spherical_2_unit_sphere" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">spherical_2_unit_sphere</code><span class="sig-paren">(</span><em class="sig-param">phi</em>, <em class="sig-param">theta</em><span class="optional">[</span>, <em class="sig-param">units='degrees'</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#spherical_2_unit_sphere" title="Permalink to this definition">¶</a></dt>
 <dd><p>Project coordinates across a sphere (or on the sky) into cartesian coordinates on a unit sphere.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>r</strong> (<em>array</em>) – Radial distance.</li>
-<li><strong>phi</strong> (<em>array</em>) – Longitudinal coordinates.</li>
-<li><strong>theta</strong> (<em>array</em>) – Latitudinal coordinates.</li>
-<li><strong>units</strong> (<em>str</em>) – Units of <code class="docutils literal notranslate"><span class="pre">ra</span></code> and <code class="docutils literal notranslate"><span class="pre">dec</span></code> given in either ‘degrees’ or ‘radians’.</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>r</strong> (<em>array</em>) – Radial distance.</p></li>
+<li><p><strong>phi</strong> (<em>array</em>) – Longitudinal coordinates.</p></li>
+<li><p><strong>theta</strong> (<em>array</em>) – Latitudinal coordinates.</p></li>
+<li><p><strong>units</strong> (<em>str</em>) – Units of <code class="docutils literal notranslate"><span class="pre">ra</span></code> and <code class="docutils literal notranslate"><span class="pre">dec</span></code> given in either ‘degrees’ or ‘radians’.</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>x, y, z</strong> <em>(array)</em> : cartesian coordinates.</p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>x, y, z</strong> <em>(array)</em> : cartesian coordinates.</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="celestial_2_unit_sphere">
-<code class="descname">celestial_2_unit_sphere</code><span class="sig-paren">(</span><em>ra</em>, <em>dec</em><span class="optional">[</span>, <em>units='degrees'</em>, <em>output='both'</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#celestial_2_unit_sphere" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">celestial_2_unit_sphere</code><span class="sig-paren">(</span><em class="sig-param">ra</em>, <em class="sig-param">dec</em><span class="optional">[</span>, <em class="sig-param">units='degrees'</em>, <em class="sig-param">output='both'</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#celestial_2_unit_sphere" title="Permalink to this definition">¶</a></dt>
 <dd><p>Project celestial coordinates on a sphere into cartesian coordinates on a unit sphere.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>r</strong> (<em>array</em>) – Radial distance.</li>
-<li><strong>ra</strong> (<em>array</em>) – Longitudinal celestial coordinates.</li>
-<li><strong>dec</strong> (<em>array</em>) – Latitudinal celestial coordinates.</li>
-<li><strong>units</strong> (<em>str</em>) – Units of <code class="docutils literal notranslate"><span class="pre">ra</span></code> and <code class="docutils literal notranslate"><span class="pre">dec</span></code> given in either ‘degrees’ or ‘radians’.</li>
-<li><strong>output</strong> (<em>str</em>) – ‘euclidean’ or ‘both’. Determines whether to output only the euclidean or both euclidean and spherical coordinates.</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>r</strong> (<em>array</em>) – Radial distance.</p></li>
+<li><p><strong>ra</strong> (<em>array</em>) – Longitudinal celestial coordinates.</p></li>
+<li><p><strong>dec</strong> (<em>array</em>) – Latitudinal celestial coordinates.</p></li>
+<li><p><strong>units</strong> (<em>str</em>) – Units of <code class="docutils literal notranslate"><span class="pre">ra</span></code> and <code class="docutils literal notranslate"><span class="pre">dec</span></code> given in either ‘degrees’ or ‘radians’.</p></li>
+<li><p><strong>output</strong> (<em>str</em>) – ‘euclidean’ or ‘both’. Determines whether to output only the euclidean or both euclidean and spherical coordinates.</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p>Returns tuple of either:</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><p>Returns tuple of either:</p>
 <ul class="simple">
-<li><strong>phi, theta</strong> <em>(array)</em> – spherical polar coordinates.</li>
-<li><strong>x, y, z</strong> <em>(array)</em> – cartesian coordinates.</li>
+<li><p><strong>phi, theta</strong> <em>(array)</em> – spherical polar coordinates.</p></li>
+<li><p><strong>x, y, z</strong> <em>(array)</em> – cartesian coordinates.</p></li>
 </ul>
 </p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="perpendicular_distance_2_angle">
-<code class="descname">perpendicular_distance_2_angle</code><span class="sig-paren">(</span><em>distance</em><span class="sig-paren">)</span><a class="headerlink" href="#perpendicular_distance_2_angle" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">perpendicular_distance_2_angle</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">distance</span></em><span class="sig-paren">)</span><a class="headerlink" href="#perpendicular_distance_2_angle" title="Permalink to this definition">¶</a></dt>
 <dd><p>Converts distances across a unit sphere to angular distances.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>distance</strong> (<em>array</em>) – Perpendicular distances across (i.e. going on the surface) a unit sphere.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>angular_distance</strong> <em>(array)</em> – The angular distance between points across a unit sphere.</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>distance</strong> (<em>array</em>) – Perpendicular distances across (i.e. going on the surface) a unit sphere.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>angular_distance</strong> <em>(array)</em> – The angular distance between points across a unit sphere.</p>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
@@ -304,7 +291,7 @@
         <a href="hist_binning.html" class="btn btn-neutral float-right" title="binning" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="plothist_class.html" class="btn btn-neutral" title="PlotHistMST" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="plothist_class.html" class="btn btn-neutral float-left" title="PlotHistMST" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -313,11 +300,19 @@
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2019, Krishna Naidoo
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -329,26 +324,16 @@
   </div>
   
 
-
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

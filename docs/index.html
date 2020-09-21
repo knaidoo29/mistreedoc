@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,38 +11,42 @@
   
 
   
-  
-  
-  
-
-  
-
-  
-  
-    
-
-  
-
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Lévy Flight" href="levy_flight.html" /> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -73,6 +76,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -88,6 +92,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -126,7 +131,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="#">Docs</a> &raquo;</li>
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
         
       <li>Introduction</li>
     
@@ -147,23 +152,23 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <table border="1" class="docutils">
+  <table class="docutils align-default">
 <colgroup>
-<col width="27%" />
-<col width="73%" />
+<col style="width: 27%" />
+<col style="width: 73%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>Author</td>
-<td>Krishna Naidoo</td>
+<tbody>
+<tr class="row-odd"><td><p>Author</p></td>
+<td><p>Krishna Naidoo</p></td>
 </tr>
-<tr class="row-even"><td>Version</td>
-<td>1.2.0</td>
+<tr class="row-even"><td><p>Version</p></td>
+<td><p>1.2.0</p></td>
 </tr>
-<tr class="row-odd"><td>Homepage</td>
-<td><a class="reference external" href="https://github.com/knaidoo29/mistree">https://github.com/knaidoo29/mistree</a></td>
+<tr class="row-odd"><td><p>Homepage</p></td>
+<td><p><a class="reference external" href="https://github.com/knaidoo29/mistree">https://github.com/knaidoo29/mistree</a></p></td>
 </tr>
-<tr class="row-even"><td>Documentation</td>
-<td><a class="reference external" href="https://knaidoo29.github.io/mistreedoc/">https://knaidoo29.github.io/mistreedoc/</a></td>
+<tr class="row-even"><td><p>Documentation</p></td>
+<td><p><a class="reference external" href="https://knaidoo29.github.io/mistreedoc/">https://knaidoo29.github.io/mistreedoc/</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -184,11 +189,11 @@
 <h1>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h1>
 <p>MiSTree will work on Python 2.7 or 3.4+ and requires the following Python modules:</p>
 <ul class="simple">
-<li><a class="reference external" href="http://www.numpy.org/">numpy</a></li>
-<li><a class="reference external" href="https://matplotlib.org">matplotlib</a></li>
-<li><a class="reference external" href="https://scipy.org/">scipy</a></li>
-<li><a class="reference external" href="http://scikit-learn.org/stable/">scikit-learn</a></li>
-<li><a class="reference external" href="https://docs.scipy.org/doc/numpy/f2py/">f2py</a> (should be installed with numpy)</li>
+<li><p><a class="reference external" href="http://www.numpy.org/">numpy</a></p></li>
+<li><p><a class="reference external" href="https://matplotlib.org">matplotlib</a></p></li>
+<li><p><a class="reference external" href="https://scipy.org/">scipy</a></p></li>
+<li><p><a class="reference external" href="http://scikit-learn.org/stable/">scikit-learn</a></p></li>
+<li><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/f2py/">f2py</a> (should be installed with numpy)</p></li>
 </ul>
 <p>For testing you will require <a class="reference external" href="https://nose.readthedocs.io/en/latest/">nose</a> or <a class="reference external" href="http://pytest.org/en/latest/">pytest</a> .</p>
 </div>
@@ -198,9 +203,23 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">mistree</span> <span class="p">[</span><span class="o">--</span><span class="n">user</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">--user</span></code> is optional and only required if you don’t have write permission. If you
-want to work on the Github version you can clone the <a class="reference external" href="https://github.com/knaidoo29/mistree">repository</a>
-and install it in place:</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">--user</span></code> is optional and only required if you don’t have write permission. If you are
+using a windows machine this may not work, in this case (or as an alternative to pip) clone the repository:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">knaidoo29</span><span class="o">/</span><span class="n">mistree</span><span class="o">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">mistree</span>
+</pre></div>
+</div>
+<p>and install by either running:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">.</span> <span class="p">[</span><span class="o">--</span><span class="n">user</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>or:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">build</span>
+<span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span>
+</pre></div>
+</div>
+<p>Similarly, if you would like to work and edit mistree you can clone the <a class="reference external" href="https://github.com/knaidoo29/mistree">repository</a>
+and install an editable version:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">knaidoo29</span><span class="o">/</span><span class="n">mistree</span><span class="o">.</span><span class="n">git</span>
 <span class="n">cd</span> <span class="n">mistree</span>
 <span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">e</span> <span class="o">.</span> <span class="p">[</span><span class="o">--</span><span class="n">user</span><span class="p">]</span>
@@ -215,7 +234,7 @@ and install it in place:</p>
 </pre></div>
 </div>
 <p>Once this is done you should be able to call MiSTree from python:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">mistree</span> <span class="kn">as</span> <span class="nn">mist</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">mistree</span> <span class="k">as</span> <span class="nn">mist</span>
 </pre></div>
 </div>
 </div>
@@ -291,28 +310,28 @@ or (if you don’t have a github account) email <a class="reference external" hr
 <p><strong>Version 1.0</strong>:</p>
 <blockquote>
 <div><ul>
-<li><p class="first">Constructing the MST of an input data set:</p>
+<li><p>Constructing the MST of an input data set:</p>
 <blockquote>
 <div><ul class="simple">
-<li>2D, 3D, tomographic or spherical polar coordinates.</li>
-<li>Apply scale cuts.</li>
+<li><p>2D, 3D, tomographic or spherical polar coordinates.</p></li>
+<li><p>Apply scale cuts.</p></li>
 </ul>
 </div></blockquote>
 </li>
-<li><p class="first">Analysis routines for the MST:</p>
+<li><p>Analysis routines for the MST:</p>
 <blockquote>
 <div><ul class="simple">
-<li>Measures the degree, edge length, branch length and branch shape of the constructed MST.</li>
+<li><p>Measures the degree, edge length, branch length and branch shape of the constructed MST.</p></li>
 </ul>
 </div></blockquote>
 </li>
-<li><p class="first">Constructs random walk distribution with :</p>
+<li><p>Constructs random walk distribution with :</p>
 <blockquote>
 <div><ul class="simple">
-<li>Lévy flight.</li>
-<li>Adjusted Lévy flight.</li>
-<li>User defined random walk distribution.</li>
-<li>In 2D/3D and with/without periodic boundary conditions.</li>
+<li><p>Lévy flight.</p></li>
+<li><p>Adjusted Lévy flight.</p></li>
+<li><p>User defined random walk distribution.</p></li>
+<li><p>In 2D/3D and with/without periodic boundary conditions.</p></li>
 </ul>
 </div></blockquote>
 </li>
@@ -321,13 +340,13 @@ or (if you don’t have a github account) email <a class="reference external" hr
 <p><strong>Version 1.1</strong>:</p>
 <blockquote>
 <div><ul class="simple">
-<li>Added binning (<code class="docutils literal notranslate"><span class="pre">HistMST</span></code>) and plotting (<code class="docutils literal notranslate"><span class="pre">PlotHistMST</span></code>) classes for handling the MST statistics.</li>
+<li><p>Added binning (<code class="docutils literal notranslate"><span class="pre">HistMST</span></code>) and plotting (<code class="docutils literal notranslate"><span class="pre">PlotHistMST</span></code>) classes for handling the MST statistics.</p></li>
 </ul>
 </div></blockquote>
 <p><strong>Version 1.2</strong>:</p>
 <blockquote>
 <div><ul class="simple">
-<li>Added automated testing routines which can be executed using <cite>nose</cite> or <cite>pytest</cite>.</li>
+<li><p>Added automated testing routines which can be executed using <cite>nose</cite> or <cite>pytest</cite>.</p></li>
 </ul>
 </div></blockquote>
 </div>
@@ -350,11 +369,19 @@ or (if you don’t have a github account) email <a class="reference external" hr
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2019, Krishna Naidoo
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -366,26 +393,16 @@ or (if you don’t have a github account) email <a class="reference external" hr
   </div>
   
 
-
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,39 +11,43 @@
   
 
   
-  
-  
-  
-
-  
-
-  
-  
-    
-
-  
-
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="graph" href="mst_graph.html" />
     <link rel="prev" title="construct" href="mst_construct.html" /> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -74,6 +77,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -108,6 +112,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -146,7 +151,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html">Docs</a> &raquo;</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="minimum_spanning_tree.html">Minimum Spanning Tree</a> &raquo;</li>
         
@@ -171,39 +176,35 @@
             
   <div class="section" id="density">
 <h1>density<a class="headerlink" href="#density" title="Permalink to this headline">¶</a></h1>
-<dl class="function">
+<dl class="py function">
 <dt id="variable_vs_density">
-<code class="descname">variable_vs_density</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>dx</em>, <em>x_param</em>, <em>y_param</em>, <em>param</em>, <em>box_size</em><span class="optional">[</span>, <em>z=None</em>, <em>z_param=None</em>, <em>mode='2D'</em>, <em>get_density=False</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#variable_vs_density" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">variable_vs_density</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">y</em>, <em class="sig-param">dx</em>, <em class="sig-param">x_param</em>, <em class="sig-param">y_param</em>, <em class="sig-param">param</em>, <em class="sig-param">box_size</em><span class="optional">[</span>, <em class="sig-param">z=None</em>, <em class="sig-param">z_param=None</em>, <em class="sig-param">mode='2D'</em>, <em class="sig-param">get_density=False</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#variable_vs_density" title="Permalink to this definition">¶</a></dt>
 <dd><p>Finds the relationship between a variable and the density of points.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>x</strong> (<em>array</em>) – Cartesian coordinates.</li>
-<li><strong>y</strong> (<em>array</em>) – Cartesian coordinates.</li>
-<li><strong>z</strong> (<em>array</em>) – Cartesian coordinates.</li>
-<li><strong>x_param</strong> (<em>array</em>) – The positions associated with the measured parameter.</li>
-<li><strong>y_param</strong> (<em>array</em>) – The positions associated with the measured parameter.</li>
-<li><strong>z_param</strong> (<em>array</em>) – The positions associated with the measured parameter.</li>
-<li><strong>param</strong> (<em>array</em>) – An array of the input parameter.</li>
-<li><strong>dx</strong> (<em>float</em>) – The size of each cell in each axis.</li>
-<li><strong>box_size</strong> (<em>float</em>) – The size of the box along one axis.</li>
-<li><strong>mode</strong> (<em>str</em>) – ‘2D’ or ‘3D’.</li>
-<li><strong>get_density</strong> (<em>bool</em>) – If true will output the density of particles.</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>array</em>) – Cartesian coordinates.</p></li>
+<li><p><strong>y</strong> (<em>array</em>) – Cartesian coordinates.</p></li>
+<li><p><strong>z</strong> (<em>array</em>) – Cartesian coordinates.</p></li>
+<li><p><strong>x_param</strong> (<em>array</em>) – The positions associated with the measured parameter.</p></li>
+<li><p><strong>y_param</strong> (<em>array</em>) – The positions associated with the measured parameter.</p></li>
+<li><p><strong>z_param</strong> (<em>array</em>) – The positions associated with the measured parameter.</p></li>
+<li><p><strong>param</strong> (<em>array</em>) – An array of the input parameter.</p></li>
+<li><p><strong>dx</strong> (<em>float</em>) – The size of each cell in each axis.</p></li>
+<li><p><strong>box_size</strong> (<em>float</em>) – The size of the box along one axis.</p></li>
+<li><p><strong>mode</strong> (<em>str</em>) – ‘2D’ or ‘3D’.</p></li>
+<li><p><strong>get_density</strong> (<em>bool</em>) – If true will output the density of particles.</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p>Returns a tuple of the following:</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><p>Returns a tuple of the following:</p>
 <ul class="simple">
-<li><strong>mean_param</strong> <em>(array)</em> – The mean of the parameter in each cell.</li>
-<li><strong>density</strong> <em>(array)</em> – The density of points in each cell.</li>
+<li><p><strong>mean_param</strong> <em>(array)</em> – The mean of the parameter in each cell.</p></li>
+<li><p><strong>density</strong> <em>(array)</em> – The density of points in each cell.</p></li>
 </ul>
 </p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
@@ -219,7 +220,7 @@
         <a href="mst_graph.html" class="btn btn-neutral float-right" title="graph" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="mst_construct.html" class="btn btn-neutral" title="construct" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="mst_construct.html" class="btn btn-neutral float-left" title="construct" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -228,11 +229,19 @@
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2019, Krishna Naidoo
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -244,26 +253,16 @@
   </div>
   
 
-
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

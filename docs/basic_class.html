@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,39 +11,43 @@
   
 
   
-  
-  
-  
-
-  
-
-  
-  
-    
-
-  
-
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="HistMST" href="hist_class.html" />
     <link rel="prev" title="Minimum Spanning Tree" href="minimum_spanning_tree.html" /> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -74,6 +77,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -108,6 +112,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -146,7 +151,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html">Docs</a> &raquo;</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="minimum_spanning_tree.html">Minimum Spanning Tree</a> &raquo;</li>
         
@@ -171,227 +176,204 @@
             
   <div class="section" id="getmst">
 <h1>GetMST<a class="headerlink" href="#getmst" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<dl class="py class">
 <dt id="GetMST">
-<em class="property">class </em><code class="descname">GetMST</code><span class="sig-paren">(</span><span class="optional">[</span><em>x=None</em>, <em>y=None</em>, <em>z=None</em>, <em>phi=None</em>, <em>theta=None</em>, <em>ra=None</em>, <em>dec=None</em>, <em>r=None</em>, <em>units='degree'</em>, <em>do_prints=False</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#GetMST" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">GetMST</code><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param">x=None</em>, <em class="sig-param">y=None</em>, <em class="sig-param">z=None</em>, <em class="sig-param">phi=None</em>, <em class="sig-param">theta=None</em>, <em class="sig-param">ra=None</em>, <em class="sig-param">dec=None</em>, <em class="sig-param">r=None</em>, <em class="sig-param">units='degree'</em>, <em class="sig-param">do_prints=False</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#GetMST" title="Permalink to this definition">¶</a></dt>
 <dd><p>A class for constructing and analysing the minimum spanning tree (MST). Input the node positions
 of a given data set to initiate the class.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>x</strong> (<em>array</em>) – Cartesian coordinates.</li>
-<li><strong>y</strong> (<em>array</em>) – Cartesian coordinates.</li>
-<li><strong>z</strong> (<em>array</em>) – Cartesian coordinates.</li>
-<li><strong>phi</strong> (<em>array</em>) – Longitude coordinates.</li>
-<li><strong>theta</strong> (<em>array</em>) – Latitude coordinates.</li>
-<li><strong>ra</strong> (<em>array</em>) – Celestial longitude coordinates.</li>
-<li><strong>dec</strong> (<em>array</em>) – Celestial latitude coordinates.</li>
-<li><strong>r</strong> (<em>array</em>) – Radial distance.</li>
-<li><strong>units</strong> (<em>str</em>) – ‘degree’ or ‘radians’ - the units of the celestial coordinates.</li>
-<li><strong>do_prints</strong> (<em>bool</em>) – Tells the functions whether it is okay for it to print out statements.</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>array</em>) – Cartesian coordinates.</p></li>
+<li><p><strong>y</strong> (<em>array</em>) – Cartesian coordinates.</p></li>
+<li><p><strong>z</strong> (<em>array</em>) – Cartesian coordinates.</p></li>
+<li><p><strong>phi</strong> (<em>array</em>) – Longitude coordinates.</p></li>
+<li><p><strong>theta</strong> (<em>array</em>) – Latitude coordinates.</p></li>
+<li><p><strong>ra</strong> (<em>array</em>) – Celestial longitude coordinates.</p></li>
+<li><p><strong>dec</strong> (<em>array</em>) – Celestial latitude coordinates.</p></li>
+<li><p><strong>r</strong> (<em>array</em>) – Radial distance.</p></li>
+<li><p><strong>units</strong> (<em>str</em>) – ‘degree’ or ‘radians’ - the units of the celestial coordinates.</p></li>
+<li><p><strong>do_prints</strong> (<em>bool</em>) – Tells the functions whether it is okay for it to print out statements.</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
+<p class="admonition-title">Note</p>
 <p>The default of all of the input parameters are set to <code class="docutils literal notranslate"><span class="pre">None</span></code> such that an internal parameter
 <code class="docutils literal notranslate"><span class="pre">_mode</span></code> of the MST can be set based on the input parameters. Supply:</p>
-<ul class="last simple">
-<li>x and y - for 2D cartesian coordinate. <code class="docutils literal notranslate"><span class="pre">_mode='2D'</span></code></li>
-<li>x, y and z - for 3D cartesian coordinates.  <code class="docutils literal notranslate"><span class="pre">_mode='3D'</span></code></li>
-<li>phi and theta - for tomographic coordinates. <code class="docutils literal notranslate"><span class="pre">_mode='tomographic'</span></code></li>
-<li>phi, theta and r - for spherical polar coordinates. <code class="docutils literal notranslate"><span class="pre">_mode='spherical</span> <span class="pre">polar'</span></code></li>
-<li>ra and dec - for celestial coordinates. <code class="docutils literal notranslate"><span class="pre">_mode='tomographic</span> <span class="pre">celestial'</span></code></li>
-<li>ra, dec and r - for spherical celestial polar coordinates. <code class="docutils literal notranslate"><span class="pre">_mode='spherical</span> <span class="pre">polar</span> <span class="pre">celestial'</span></code></li>
+<ul class="simple">
+<li><p>x and y - for 2D cartesian coordinate. <code class="docutils literal notranslate"><span class="pre">_mode='2D'</span></code></p></li>
+<li><p>x, y and z - for 3D cartesian coordinates.  <code class="docutils literal notranslate"><span class="pre">_mode='3D'</span></code></p></li>
+<li><p>phi and theta - for tomographic coordinates. <code class="docutils literal notranslate"><span class="pre">_mode='tomographic'</span></code></p></li>
+<li><p>phi, theta and r - for spherical polar coordinates. <code class="docutils literal notranslate"><span class="pre">_mode='spherical</span> <span class="pre">polar'</span></code></p></li>
+<li><p>ra and dec - for celestial coordinates. <code class="docutils literal notranslate"><span class="pre">_mode='tomographic</span> <span class="pre">celestial'</span></code></p></li>
+<li><p>ra, dec and r - for spherical celestial polar coordinates. <code class="docutils literal notranslate"><span class="pre">_mode='spherical</span> <span class="pre">polar</span> <span class="pre">celestial'</span></code></p></li>
 </ul>
 </div>
-<dl class="function">
+<dl class="py function">
 <dt id="GetMST.define_k_neighbours">
-<code class="descname">define_k_neighbours</code><span class="sig-paren">(</span><em>k_neighbours</em><span class="sig-paren">)</span><a class="headerlink" href="#GetMST.define_k_neighbours" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">define_k_neighbours</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">k_neighbours</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GetMST.define_k_neighbours" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the k_neighbours value. This is automatically set to 20 if this is not called.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>k_neighbours</strong> (<em>int</em>) – The number of nearest neighbours to consider when creating the k-nearest neighbour graph.</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>k_neighbours</strong> (<em>int</em>) – The number of nearest neighbours to consider when creating the k-nearest neighbour graph.</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="GetMST.scale_cut">
-<code class="descname">scale_cut</code><span class="sig-paren">(</span><em>scale_cut_length</em><span class="sig-paren">)</span><a class="headerlink" href="#GetMST.scale_cut" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">scale_cut</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">scale_cut_length</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GetMST.scale_cut" title="Permalink to this definition">¶</a></dt>
 <dd><p>Defines the scale cut parameters if a scaling cut is required.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>scale_cut_length</strong> (<em>float</em>) – The minimum allowed length in the k_nearest_neighbour_graph.</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>scale_cut_length</strong> (<em>float</em>) – The minimum allowed length in the k_nearest_neighbour_graph.</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="GetMST.construct_mst">
-<code class="descname">construct_mst</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GetMST.construct_mst" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">construct_mst</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GetMST.construct_mst" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs the minimum spanning tree from the input data set.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="GetMST.get_degree">
-<code class="descname">get_degree</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GetMST.get_degree" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_degree</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GetMST.get_degree" title="Permalink to this definition">¶</a></dt>
 <dd><p>Find the degree of each node in the constructed MST.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="GetMST.get_mean_degree_for_edges">
-<code class="descname">get_mean_degree_for_edges</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GetMST.get_mean_degree_for_edges" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_mean_degree_for_edges</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GetMST.get_mean_degree_for_edges" title="Permalink to this definition">¶</a></dt>
 <dd><p>Finds the mean degree for each edge.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="GetMST.get_degree_for_edges">
-<code class="descname">get_degree_for_edges</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GetMST.get_degree_for_edges" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_degree_for_edges</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GetMST.get_degree_for_edges" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the degree at either end of an edge.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="GetMST.get_branches">
-<code class="descname">get_branches</code><span class="sig-paren">(</span><span class="optional">[</span><em>box_size=None</em>, <em>sub_divisions=1</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#GetMST.get_branches" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_branches</code><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param">box_size=None</em>, <em class="sig-param">sub_divisions=1</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#GetMST.get_branches" title="Permalink to this definition">¶</a></dt>
 <dd><p>Find the branches of a MST.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>box_size</strong> (<em>float</em>) – The size of the ‘2D’ or ‘3D’ box. Of course, this is only applicable if the data was constructed inside a box.</li>
-<li><strong>sub_divisions</strong> (<em>int</em>) – The number of divisions used to divide the data set in each axis. Used for speeding up the branch finding algorithm when using many points (&gt; 100000).</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>box_size</strong> (<em>float</em>) – The size of the ‘2D’ or ‘3D’ box. Of course, this is only applicable if the data was constructed inside a box.</p></li>
+<li><p><strong>sub_divisions</strong> (<em>int</em>) – The number of divisions used to divide the data set in each axis. Used for speeding up the branch finding algorithm when using many points (&gt; 100000).</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="GetMST.get_branch_edge_count">
-<code class="descname">get_branch_edge_count</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GetMST.get_branch_edge_count" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_branch_edge_count</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GetMST.get_branch_edge_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>Finds the number of edges included in each branch.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="GetMST.get_branch_shape">
-<code class="descname">get_branch_shape</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GetMST.get_branch_shape" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_branch_shape</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GetMST.get_branch_shape" title="Permalink to this definition">¶</a></dt>
 <dd><p>Finds the shape of all branches. This is simply the straight line distance, between the two ends, divided by
 the branch length.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="GetMST.get_stats_vs_density">
-<code class="descname">get_stats_vs_density</code><span class="sig-paren">(</span><em>dx</em>, <em>box_size</em><span class="sig-paren">)</span><a class="headerlink" href="#GetMST.get_stats_vs_density" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_stats_vs_density</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dx</span></em>, <em class="sig-param"><span class="n">box_size</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GetMST.get_stats_vs_density" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes the relation between the density contrast and the MST statistics.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>dx</strong> (<em>float</em>) – The length of the individual cells, that the full box will be divided into, across one dimension.</li>
-<li><strong>box_size</strong> (<em>float</em>) – The length of the 2D or 3D box across one axis.</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dx</strong> (<em>float</em>) – The length of the individual cells, that the full box will be divided into, across one dimension.</p></li>
+<li><p><strong>box_size</strong> (<em>float</em>) – The length of the 2D or 3D box across one axis.</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><p>a tuple of the following evaluated in each cell:</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><p>a tuple of the following evaluated in each cell:</p>
 <ul class="simple">
-<li><strong>density</strong> <em>(array)</em></li>
-<li><strong>mean_degree</strong> <em>(array)</em></li>
-<li><strong>mean_edge_length</strong> <em>(array)</em></li>
-<li><strong>mean_branch_length</strong> <em>(array)</em></li>
-<li><strong>mean_branch_shape</strong> <em>(array)</em></li>
+<li><p><strong>density</strong> <em>(array)</em></p></li>
+<li><p><strong>mean_degree</strong> <em>(array)</em></p></li>
+<li><p><strong>mean_edge_length</strong> <em>(array)</em></p></li>
+<li><p><strong>mean_branch_length</strong> <em>(array)</em></p></li>
+<li><p><strong>mean_branch_shape</strong> <em>(array)</em></p></li>
 </ul>
 </p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">To do:</th><td class="field-body"><p class="first last">Add support for data sets given in ‘tomographic’ and ‘spherical polar’ coordinates.</p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-odd">To do</dt>
+<dd class="field-odd"><p>Add support for data sets given in ‘tomographic’ and ‘spherical polar’ coordinates.</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="GetMST.output_stats">
-<code class="descname">output_stats</code><span class="sig-paren">(</span><span class="optional">[</span><em>include_index=False</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#GetMST.output_stats" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">output_stats</code><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param">include_index=False</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#GetMST.output_stats" title="Permalink to this definition">¶</a></dt>
 <dd><p>Outputs the MST statistics.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>include_index</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code> will output the indexes of the nodes for each edge and the indexes of edges in each branch.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A tuple of the following:<ul class="simple">
-<li><strong>degree</strong> <em>(array)</em> – The degree of each node in the MST.</li>
-<li><strong>edge_length</strong> <em>(array)</em> – The length of each edge in the MST.</li>
-<li><strong>branch_length</strong> <em>(array)</em> – The length of branches in the MST.</li>
-<li><strong>branch_shape</strong> <em>(array)</em> – The shape of branches in the MST.</li>
-<li><strong>edge_index</strong> <em>(array)</em> – [Optional] A 2 dimensional array, where the first nested array shows the indexes for the nodes on one end of the edge and the second shows the other node.</li>
-<li><strong>branch_index</strong> <em>(array)</em> – [Optional] A list of branches, where each branch is given as a list of the indexes of the member edges.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="GetMST.get_stats">
-<code class="descname">get_stats</code><span class="sig-paren">(</span><span class="optional">[</span><em>include_index=False</em>, <em>sub_divisions=1</em>, <em>k_neighbours=None</em>, <em>scale_cut_length=0.</em>, <em>partitions=1</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#GetMST.get_stats" title="Permalink to this definition">¶</a></dt>
-<dd><p>Computes the MST and outputs the statistics.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>include_index</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code> will output the indexes of the nodes for each edge and the indexes of edges in each branch.</li>
-<li><strong>sub_divisions</strong> (<em>int</em>) – The number of divisions used to divide the data set in each axis. Used for speeding up the branch finding algorithm when using many points (&gt; 100000).</li>
-<li><strong>k_neighbours</strong> (<em>int</em>) – The number of nearest neighbours to consider when creating the k-nearest neighbour graph.</li>
-<li><strong>scale_cut_length</strong> (<em>float</em>) – The minimum allowed length in the k_nearest_neighbour_graph.</li>
-<li><strong>partitions</strong> (<em>int</em>) – Number of partitions to divide the data set into.</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p>A tuple of the following:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>include_index</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code> will output the indexes of the nodes for each edge and the indexes of edges in each branch.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><p>A tuple of the following:</p>
 <ul class="simple">
-<li><strong>degree</strong> <em>(array)</em> – The degree of each node in the MST.</li>
-<li><strong>edge_length</strong> <em>(array)</em> – The length of each edge in the MST.</li>
-<li><strong>branch_length</strong> <em>(array)</em> – The length of branches in the MST.</li>
-<li><strong>branch_shape</strong> <em>(array)</em> – The shape of branches in the MST.</li>
-<li><strong>edge_index</strong> <em>(array)</em> – [Optional] A 2 dimensional array, where the first nested array shows the indexes for the nodes on one end of the edge and the second shows the other node.</li>
-<li><strong>branch_index</strong> <em>(array)</em> – [Optional] A list of branches, where each branch is given as a list of the indexes of the member edges.</li>
-<li><strong>groups</strong> <em>(array)</em> – [Optional] The assigned groups for each point in the data set (only outputted if include_index=True). Indexes here are indexes of the elements in each group.</li>
+<li><p><strong>degree</strong> <em>(array)</em> – The degree of each node in the MST.</p></li>
+<li><p><strong>edge_length</strong> <em>(array)</em> – The length of each edge in the MST.</p></li>
+<li><p><strong>branch_length</strong> <em>(array)</em> – The length of branches in the MST.</p></li>
+<li><p><strong>branch_shape</strong> <em>(array)</em> – The shape of branches in the MST.</p></li>
+<li><p><strong>edge_index</strong> <em>(array)</em> – [Optional] A 2 dimensional array, where the first nested array shows the indexes for the nodes on one end of the edge and the second shows the other node.</p></li>
+<li><p><strong>branch_index</strong> <em>(array)</em> – [Optional] A list of branches, where each branch is given as a list of the indexes of the member edges.</p></li>
 </ul>
 </p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="GetMST.get_stats">
+<code class="sig-name descname">get_stats</code><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param">include_index=False</em>, <em class="sig-param">sub_divisions=1</em>, <em class="sig-param">k_neighbours=None</em>, <em class="sig-param">scale_cut_length=0.</em>, <em class="sig-param">partitions=1</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#GetMST.get_stats" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the MST and outputs the statistics.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>include_index</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code> will output the indexes of the nodes for each edge and the indexes of edges in each branch.</p></li>
+<li><p><strong>sub_divisions</strong> (<em>int</em>) – The number of divisions used to divide the data set in each axis. Used for speeding up the branch finding algorithm when using many points (&gt; 100000).</p></li>
+<li><p><strong>k_neighbours</strong> (<em>int</em>) – The number of nearest neighbours to consider when creating the k-nearest neighbour graph.</p></li>
+<li><p><strong>scale_cut_length</strong> (<em>float</em>) – The minimum allowed length in the k_nearest_neighbour_graph.</p></li>
+<li><p><strong>partitions</strong> (<em>int</em>) – Number of partitions to divide the data set into.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><p>A tuple of the following:</p>
+<ul class="simple">
+<li><p><strong>degree</strong> <em>(array)</em> – The degree of each node in the MST.</p></li>
+<li><p><strong>edge_length</strong> <em>(array)</em> – The length of each edge in the MST.</p></li>
+<li><p><strong>branch_length</strong> <em>(array)</em> – The length of branches in the MST.</p></li>
+<li><p><strong>branch_shape</strong> <em>(array)</em> – The shape of branches in the MST.</p></li>
+<li><p><strong>edge_index</strong> <em>(array)</em> – [Optional] A 2 dimensional array, where the first nested array shows the indexes for the nodes on one end of the edge and the second shows the other node.</p></li>
+<li><p><strong>branch_index</strong> <em>(array)</em> – [Optional] A list of branches, where each branch is given as a list of the indexes of the member edges.</p></li>
+<li><p><strong>groups</strong> <em>(array)</em> – [Optional] The assigned groups for each point in the data set (only outputted if include_index=True). Indexes here are indexes of the elements in each group.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
+<p class="admonition-title">Note</p>
 <p>This will calculate all the MST statistics by putting the data set through the following functions:</p>
-<blockquote class="last">
+<blockquote>
 <div><ol class="arabic simple">
-<li>k_neighbours (if k_neighbours is specified)</li>
-<li>construct_mst</li>
-<li>get_degree</li>
-<li>get_degree_for_edges</li>
-<li>get_branches</li>
-<li>get_branch_shape</li>
-<li>output_stats</li>
+<li><p>k_neighbours (if k_neighbours is specified)</p></li>
+<li><p>construct_mst</p></li>
+<li><p>get_degree</p></li>
+<li><p>get_degree_for_edges</p></li>
+<li><p>get_branches</p></li>
+<li><p>get_branch_shape</p></li>
+<li><p>output_stats</p></li>
 </ol>
 </div></blockquote>
 </div>
@@ -412,7 +394,7 @@ the branch length.</p>
         <a href="hist_class.html" class="btn btn-neutral float-right" title="HistMST" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="minimum_spanning_tree.html" class="btn btn-neutral" title="Minimum Spanning Tree" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="minimum_spanning_tree.html" class="btn btn-neutral float-left" title="Minimum Spanning Tree" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -421,11 +403,19 @@ the branch length.</p>
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2019, Krishna Naidoo
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -437,26 +427,16 @@ the branch length.</p>
   </div>
   
 
-
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>
