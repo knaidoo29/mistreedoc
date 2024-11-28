@@ -1,90 +1,48 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PlotHistMST &mdash;   documentation</title>
-  
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
 
   
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-
-  
-  
-  
-  
-
-  
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="coordinate_utility" href="coordinates.html" />
     <link rel="prev" title="HistMST" href="hist_class.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
           
-            <a href="index.html">
           
-
-          
+          <a href="index.html">
             
-            <img src="_static/mistree_logo_extra.png" class="logo" alt="Logo"/>
-          
+              <img src="_static/mistree_logo_extra.png" class="logo" alt="Logo"/>
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="levy_flight.html">Lévy Flight</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="minimum_spanning_tree.html">Minimum Spanning Tree</a><ul class="current">
@@ -92,7 +50,10 @@
 <li class="toctree-l2 current"><a class="reference internal" href="minimum_spanning_tree.html#functions">Functions</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="basic_class.html">GetMST</a></li>
 <li class="toctree-l3"><a class="reference internal" href="hist_class.html">HistMST</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">PlotHistMST</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">PlotHistMST</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#PlotHistMST"><code class="docutils literal notranslate"><span class="pre">PlotHistMST</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="coordinates.html">coordinate_utility</a></li>
 <li class="toctree-l3"><a class="reference internal" href="hist_binning.html">binning</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mst_branches.html">branches</a></li>
@@ -109,83 +70,43 @@
 </li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html"></a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-        
-          <li><a href="minimum_spanning_tree.html">Minimum Spanning Tree</a> &raquo;</li>
-        
-      <li>PlotHistMST</li>
-    
-    
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="minimum_spanning_tree.html">Minimum Spanning Tree</a></li>
+      <li class="breadcrumb-item active">PlotHistMST</li>
       <li class="wy-breadcrumbs-aside">
-        
-            
             <a href="_sources/plothist_class.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="plothistmst">
-<h1>PlotHistMST<a class="headerlink" href="#plothistmst" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="plothistmst">
+<h1>PlotHistMST<a class="headerlink" href="#plothistmst" title="Link to this heading"></a></h1>
 <dl class="py class">
-<dt id="PlotHistMST">
-<em class="property">class </em><code class="sig-name descname">PlotHistMST</code><a class="headerlink" href="#PlotHistMST" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="PlotHistMST">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PlotHistMST</span></span><a class="headerlink" href="#PlotHistMST" title="Link to this definition"></a></dt>
 <dd><p>A class for plotting the MST statistics.</p>
 <dl class="py function">
-<dt id="PlotHistMST.read_mst">
-<code class="sig-name descname">read_mst</code><span class="sig-paren">(</span><em class="sig-param">mst_hist</em><span class="optional">[</span>, <em class="sig-param">color=None</em>, <em class="sig-param">linewidth=2.</em>, <em class="sig-param">linestyle=None</em>, <em class="sig-param">alpha=0.8</em>, <em class="sig-param">label=None</em>, <em class="sig-param">alpha_envelope=0.3</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#PlotHistMST.read_mst" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="PlotHistMST.read_mst">
+<span class="sig-name descname"><span class="pre">read_mst</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mst_hist</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">color=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">linewidth=2.</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">linestyle=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha=0.8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha_envelope=0.3</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#PlotHistMST.read_mst" title="Link to this definition"></a></dt>
 <dd><p>Input MST statistics.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>mst_hist</strong> (<em>dict</em>) – Binned MST dictionary given in the format outputted by HistMST.</p></li>
 <li><p><strong>color</strong> (<em>str</em>) – Color of the MST histogram.</p></li>
@@ -200,11 +121,11 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="PlotHistMST.plot">
-<code class="sig-name descname">plot</code><span class="sig-paren">(</span><em class="sig-param">[usebox=True, saveas=None, fontsize=16, figsize=(16, 4), subplot_setup='4x1', units=None, showenvelopes=True, showsigma=2, usecomp=True, usemean=False, heigh_ratios=[2, 1], usefraction=True, whichcomp=0, plotzeroline=True, legend=True, subplot_adjust_top=0.85, legend_fontsize=14, legend_column=4, xlabels=[None, None, None, None], dpi=None, plt_output='show']</em><span class="sig-paren">)</span><a class="headerlink" href="#PlotHistMST.plot" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="PlotHistMST.plot">
+<span class="sig-name descname"><span class="pre">plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">[usebox=True,</span> <span class="pre">saveas=None,</span> <span class="pre">fontsize=16,</span> <span class="pre">figsize=(16,</span> <span class="pre">4),</span> <span class="pre">subplot_setup='4x1',</span> <span class="pre">units=None,</span> <span class="pre">showenvelopes=True,</span> <span class="pre">showsigma=2,</span> <span class="pre">usecomp=True,</span> <span class="pre">usemean=False,</span> <span class="pre">heigh_ratios=[2,</span> <span class="pre">1],</span> <span class="pre">usefraction=True,</span> <span class="pre">whichcomp=0,</span> <span class="pre">plotzeroline=True,</span> <span class="pre">legend=True,</span> <span class="pre">subplot_adjust_top=0.85,</span> <span class="pre">legend_fontsize=14,</span> <span class="pre">legend_column=4,</span> <span class="pre">xlabels=[None,</span> <span class="pre">None,</span> <span class="pre">None,</span> <span class="pre">None],</span> <span class="pre">dpi=None,</span> <span class="pre">plt_output='show']</span></em><span class="sig-paren">)</span><a class="headerlink" href="#PlotHistMST.plot" title="Link to this definition"></a></dt>
 <dd><p>Outputs the final plot of the MST statistics.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>usebox</strong> (<em>bool</em>) – For l, b and s this sets whether to use boxes for the histogram or to simple plot as line from the bin centre.</p></li>
 <li><p><strong>saveas</strong> (<em>str</em>) – If not None, this will save the plot with the name provided.</p></li>
@@ -233,69 +154,44 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="PlotHistMST.clean">
-<code class="sig-name descname">clean</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#PlotHistMST.clean" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="PlotHistMST.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#PlotHistMST.clean" title="Link to this definition"></a></dt>
 <dd><p>Resets PlotHistMST variables.</p>
 </dd></dl>
 
 </dd></dl>
 
-</div>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="coordinates.html" class="btn btn-neutral float-right" title="coordinate_utility" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="hist_class.html" class="btn btn-neutral float-left" title="HistMST" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="hist_class.html" class="btn btn-neutral float-left" title="HistMST" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="coordinates.html" class="btn btn-neutral float-right" title="coordinate_utility" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        
-        &copy; Copyright 2019, Krishna Naidoo
-
-    </p>
+    <p>&#169; Copyright 2019, Krishna Naidoo.</p>
   </div>
-    
-    
-    
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
-    
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
-
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

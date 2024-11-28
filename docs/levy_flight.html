@@ -1,90 +1,48 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lévy Flight &mdash;   documentation</title>
-  
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
 
   
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-
-  
-  
-  
-  
-
-  
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Minimum Spanning Tree" href="minimum_spanning_tree.html" />
     <link rel="prev" title="Introduction" href="index.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
           
-            <a href="index.html">
           
-
-          
+          <a href="index.html">
             
-            <img src="_static/mistree_logo_extra.png" class="logo" alt="Logo"/>
-          
+              <img src="_static/mistree_logo_extra.png" class="logo" alt="Logo"/>
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Lévy Flight</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#tutorial">Tutorial</a><ul>
@@ -102,95 +60,61 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#functions">Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#get_random_flight"><code class="docutils literal notranslate"><span class="pre">get_random_flight()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#get_levy_flight"><code class="docutils literal notranslate"><span class="pre">get_levy_flight()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#get_adjusted_levy_flight"><code class="docutils literal notranslate"><span class="pre">get_adjusted_levy_flight()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="minimum_spanning_tree.html">Minimum Spanning Tree</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html"></a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-        
-      <li>Lévy Flight</li>
-    
-    
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Lévy Flight</li>
       <li class="wy-breadcrumbs-aside">
-        
-            
             <a href="_sources/levy_flight.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="levy-flight">
-<h1>Lévy Flight<a class="headerlink" href="#levy-flight" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="levy-flight">
+<h1>Lévy Flight<a class="headerlink" href="#levy-flight" title="Link to this heading"></a></h1>
 <p>An ipython notebook version of this tutorial can be found
 <a class="reference external" href="https://github.com/knaidoo29/mistree/tree/master/tutorials/notebooks">here</a>
 (for an online version see <a class="reference external" href="https://mybinder.org/v2/gh/knaidoo29/mistree/master?filepath=tutorials%2Fnotebooks%2F">binder</a> ).</p>
-<div class="section" id="tutorial">
-<h2>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h2>
+<section id="tutorial">
+<h2>Tutorial<a class="headerlink" href="#tutorial" title="Link to this heading"></a></h2>
 <p>Random walk distributions draw step sizes randomly from a given probability
 distribution function. The walk begins at a point and ‘steps’ to a new point in a random
 direction.</p>
 <p>These types of distributions were invented by Benoît Mandelbrot. The Lévy flight
 distribution is a specific random walk distribution useful for creating fractal
 distribution which exhibits power law clustering.</p>
-<div class="section" id="d-vs-3d">
-<h3>2D vs 3D<a class="headerlink" href="#d-vs-3d" title="Permalink to this headline">¶</a></h3>
+<section id="d-vs-3d">
+<h3>2D vs 3D<a class="headerlink" href="#d-vs-3d" title="Link to this heading"></a></h3>
 <p>In these example we will look only at Lévy flight distribution, first in 2D
 and then 3D. All other parameters are kept to their default values. We will
 explore what the other parameters do later.</p>
-<div class="section" id="d">
-<h4>2D<a class="headerlink" href="#d" title="Permalink to this headline">¶</a></h4>
+<section id="d">
+<h4>2D<a class="headerlink" href="#d" title="Link to this heading"></a></h4>
 <p>In this example we show how to generate a random walk distribution in 2D. Since
 the default setting is in 3D we will need to specify that we want this in 2D.</p>
 <p>Before this we need to first import some basic modules for plotting and MiSTree itself.</p>
@@ -219,10 +143,11 @@ random distribution!</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="_images/2D_example.png"><img alt="_images/2D_example.png" class="align-center" src="_images/2D_example.png" style="width: 450.0px; height: 450.0px;" /></a>
-</div>
-<div class="section" id="id1">
-<h4>3D<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<a class="reference internal image-reference" href="_images/2D_example.png"><img alt="_images/2D_example.png" class="align-center" src="_images/2D_example.png" style="width: 450.0px; height: 450.0px;" />
+</a>
+</section>
+<section id="id1">
+<h4>3D<a class="headerlink" href="#id1" title="Link to this heading"></a></h4>
 <p>Creating a 3D distribution is even easier, since this is the default setting for
 all the random walk functions. Like before we again specify the <code class="docutils literal notranslate"><span class="pre">size</span></code> and generate
 the distribution in the following way:</p>
@@ -257,11 +182,12 @@ the distribution in the following way:</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="_images/3D_example.png"><img alt="_images/3D_example.png" class="align-center" src="_images/3D_example.png" style="width: 600.0px; height: 600.0px;" /></a>
-</div>
-</div>
-<div class="section" id="periodic-boundary">
-<h3>Periodic boundary<a class="headerlink" href="#periodic-boundary" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/3D_example.png"><img alt="_images/3D_example.png" class="align-center" src="_images/3D_example.png" style="width: 600.0px; height: 600.0px;" />
+</a>
+</section>
+</section>
+<section id="periodic-boundary">
+<h3>Periodic boundary<a class="headerlink" href="#periodic-boundary" title="Link to this heading"></a></h3>
 <p>All random walk distributions created by MiSTree have periodic boundary conditions
 by default. This means that the box is repeated infinitely in all dimensions. This
 is a common procedure used in N-Body simulations. When a particle steps out of the
@@ -291,10 +217,11 @@ to turn this off you will need to set <code class="docutils literal notranslate"
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="_images/2D_example_no_periodic_boundary.png"><img alt="_images/2D_example_no_periodic_boundary.png" class="align-center" src="_images/2D_example_no_periodic_boundary.png" style="width: 450.0px; height: 450.0px;" /></a>
-</div>
-<div class="section" id="random-walk-models">
-<h3>Random Walk Models<a class="headerlink" href="#random-walk-models" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/2D_example_no_periodic_boundary.png"><img alt="_images/2D_example_no_periodic_boundary.png" class="align-center" src="_images/2D_example_no_periodic_boundary.png" style="width: 450.0px; height: 450.0px;" />
+</a>
+</section>
+<section id="random-walk-models">
+<h3>Random Walk Models<a class="headerlink" href="#random-walk-models" title="Link to this heading"></a></h3>
 <p>Random walk distributions can be made by one of the Lévy flight functions:
 <code class="docutils literal notranslate"><span class="pre">get_levy_flight</span></code> or <code class="docutils literal notranslate"><span class="pre">get_adjusted_levy_flight</span></code> which creates a distribution
 of <em>Lévy flight</em> and <em>adjusted Lévy flight</em> distributions, respectively. Both of
@@ -302,8 +229,8 @@ these functions interact with the function <code class="docutils literal notrans
 to generate a random walk with your own specified probability distribution function
 (PDF). Below we will explain in detail how these distributions work and what the
 parameters do in each model.</p>
-<div class="section" id="id2">
-<h4>Lévy Flight<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<section id="id2">
+<h4>Lévy Flight<a class="headerlink" href="#id2" title="Link to this heading"></a></h4>
 <p>Lévy flights are defined with a power law PDF and a cumulative distribution
 function (CDF) given by,</p>
 <div class="math">
@@ -331,7 +258,8 @@ PDF(t) = \left\{ \begin{array}{lcl}
 \end{equation*}"/></p>
 </div><p>If we are to change <img class="math" src="_images/math/400168b1b97dfbe85fe1a71d0f3d47b5e16e42e9.png" alt="t_{0}"/>, which is the minimum step length, to shorter
 values this results in there being a higher probability of smaller step sizes.</p>
-<a class="reference internal image-reference" href="_images/levy_flight_changing_t0.png"><img alt="_images/levy_flight_changing_t0.png" class="align-center" src="_images/levy_flight_changing_t0.png" style="width: 480.0px; height: 360.0px;" /></a>
+<a class="reference internal image-reference" href="_images/levy_flight_changing_t0.png"><img alt="_images/levy_flight_changing_t0.png" class="align-center" src="_images/levy_flight_changing_t0.png" style="width: 480.0px; height: 360.0px;" />
+</a>
 <p>We now generate a set of realisations with these parameters.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">size</span> <span class="o">=</span> <span class="mi">50000</span> <span class="c1"># how many particles in the distribution</span>
 
@@ -368,9 +296,11 @@ values this results in there being a higher probability of smaller step sizes.</
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="_images/levy_flight_changing_t0_distribution.png"><img alt="_images/levy_flight_changing_t0_distribution.png" class="align-center" src="_images/levy_flight_changing_t0_distribution.png" style="width: 750.0px; height: 250.0px;" /></a>
+<a class="reference internal image-reference" href="_images/levy_flight_changing_t0_distribution.png"><img alt="_images/levy_flight_changing_t0_distribution.png" class="align-center" src="_images/levy_flight_changing_t0_distribution.png" style="width: 750.0px; height: 250.0px;" />
+</a>
 <p>If we instead vary <img class="math" src="_images/math/2f5aa019312e1bbc969deab8dca8b00f76025404.png" alt="\alpha"/> this changes the gradient of the slope.</p>
-<a class="reference internal image-reference" href="_images/levy_flight_changing_alpha.png"><img alt="_images/levy_flight_changing_alpha.png" class="align-center" src="_images/levy_flight_changing_alpha.png" style="width: 480.0px; height: 360.0px;" /></a>
+<a class="reference internal image-reference" href="_images/levy_flight_changing_alpha.png"><img alt="_images/levy_flight_changing_alpha.png" class="align-center" src="_images/levy_flight_changing_alpha.png" style="width: 480.0px; height: 360.0px;" />
+</a>
 <p>We now generate a set of realisations with these parameters.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">size</span> <span class="o">=</span> <span class="mi">50000</span> <span class="c1"># how many particles in the distribution</span>
 
@@ -407,13 +337,14 @@ values this results in there being a higher probability of smaller step sizes.</
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="_images/levy_flight_changing_alpha_distribution.png"><img alt="_images/levy_flight_changing_alpha_distribution.png" class="align-center" src="_images/levy_flight_changing_alpha_distribution.png" style="width: 750.0px; height: 250.0px;" /></a>
+<a class="reference internal image-reference" href="_images/levy_flight_changing_alpha_distribution.png"><img alt="_images/levy_flight_changing_alpha_distribution.png" class="align-center" src="_images/levy_flight_changing_alpha_distribution.png" style="width: 750.0px; height: 250.0px;" />
+</a>
 <p>These two parameters can both be changed to affect the amount of clustering. But since
 <img class="math" src="_images/math/2f5aa019312e1bbc969deab8dca8b00f76025404.png" alt="\alpha"/> is directly related to the two point correlation function it is often
 considered to be the more important parameter.</p>
-</div>
-<div class="section" id="adjusted-levy-flight">
-<h4>Adjusted Lévy Flight<a class="headerlink" href="#adjusted-levy-flight" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="adjusted-levy-flight">
+<h4>Adjusted Lévy Flight<a class="headerlink" href="#adjusted-levy-flight" title="Link to this heading"></a></h4>
 <p>We developed a move flexible Lévy flight model to better deal with small scales.
 Normal Lévy flight distributions are able to produce power law 2PCF, however below
 <img class="math" src="_images/math/400168b1b97dfbe85fe1a71d0f3d47b5e16e42e9.png" alt="t_{0}"/> the 2PCF plateaus. To be able to control what happens below this scale
@@ -452,10 +383,11 @@ PDF(t) = \left\{ \begin{array}{lcl}
 \end{equation*}"/></p>
 </div><p>Below we show what happens to the CDF of the adjusted Lévy flight distribution if we
 vary these parameters individually whilst keeping all other parameters constant.</p>
-<a class="reference internal image-reference" href="_images/adjusted_levy_flight_cdf.png"><img alt="_images/adjusted_levy_flight_cdf.png" class="align-center" src="_images/adjusted_levy_flight_cdf.png" style="width: 750.0px; height: 250.0px;" /></a>
-</div>
-<div class="section" id="other-random-walk">
-<h4>Other Random Walk<a class="headerlink" href="#other-random-walk" title="Permalink to this headline">¶</a></h4>
+<a class="reference internal image-reference" href="_images/adjusted_levy_flight_cdf.png"><img alt="_images/adjusted_levy_flight_cdf.png" class="align-center" src="_images/adjusted_levy_flight_cdf.png" style="width: 750.0px; height: 250.0px;" />
+</a>
+</section>
+<section id="other-random-walk">
+<h4>Other Random Walk<a class="headerlink" href="#other-random-walk" title="Link to this heading"></a></h4>
 <p>To create a random walk distribution with a user defined steps, you will
 need to first generate a distribution of step sizes. To do this you will need to
 invert the CDF of a distribution and input random uniform values between 0 and 1.
@@ -493,20 +425,21 @@ We can generate this in the following way:</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="_images/levy_log_normal.png"><img alt="_images/levy_log_normal.png" class="align-center" src="_images/levy_log_normal.png" style="width: 525.0px; height: 525.0px;" /></a>
-</div>
-</div>
-</div>
-<div class="section" id="functions">
-<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/levy_log_normal.png"><img alt="_images/levy_log_normal.png" class="align-center" src="_images/levy_log_normal.png" style="width: 525.0px; height: 525.0px;" />
+</a>
+</section>
+</section>
+</section>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading"></a></h2>
 <p>Indepth documentation on the functions to generate Lévy Flight-like simulations are provided below.</p>
 <dl class="py function">
-<dt id="get_random_flight">
-<code class="sig-name descname">get_random_flight</code><span class="sig-paren">(</span><em class="sig-param">steps</em><span class="optional">[</span>, <em class="sig-param">mode='3D'</em>, <em class="sig-param">box_size=75.</em>, <em class="sig-param">periodic=True</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#get_random_flight" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="get_random_flight">
+<span class="sig-name descname"><span class="pre">get_random_flight</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">steps</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">mode='3D'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">box_size=75.</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">periodic=True</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#get_random_flight" title="Link to this definition"></a></dt>
 <dd><p>Generates a random realisation of a ‘Levy flight’-like distribution. The random step step sizes
 are defined by the user.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>steps</strong> (<em>array</em>) – Distribution of step sizes defines by the user.</p></li>
 <li><p><strong>mode</strong> (<em>str</em>) – ‘2D’ or ‘3D’ – Defines whether the distribution is defined in 2D or 3D cartesian coordinates.</p></li>
@@ -514,18 +447,18 @@ are defined by the user.</p>
 <li><p><strong>periodic</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code> then this sets periodic boundary condition on the Lévy flight realisation. If <code class="docutils literal notranslate"><span class="pre">False</span></code>, the box_size parameter is ignored.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>x</strong>, <strong>y</strong>, <strong>z</strong> <em>(array)</em> – Distribution of random walk particles. <strong>z</strong> is only outputted if this is a 3D distribution.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
-<dt id="get_levy_flight">
-<code class="sig-name descname">get_levy_flight</code><span class="sig-paren">(</span><em class="sig-param">size</em><span class="optional">[</span>, <em class="sig-param">periodic=True</em>, <em class="sig-param">box_size=75.</em>, <em class="sig-param">t_0=0.2</em>, <em class="sig-param">alpha=1.5</em>, <em class="sig-param">mode='3D'</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#get_levy_flight" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="get_levy_flight">
+<span class="sig-name descname"><span class="pre">get_levy_flight</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">periodic=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">box_size=75.</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_0=0.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha=1.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode='3D'</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#get_levy_flight" title="Link to this definition"></a></dt>
 <dd><p>Generates a random realisation of a Levy flight distribution.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>size</strong> (<em>int</em>) – Number of points.</p></li>
 <li><p><strong>mode</strong> (<em>str</em>) – ‘2D’ or ‘3D’ – Defines whether the distribution is defined in 2D or 3D cartesian coordinates.</p></li>
@@ -535,18 +468,18 @@ are defined by the user.</p>
 <li><p><strong>alpha</strong> (<em>float</em>) – Levy flight parameter, step size power law slope.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>x</strong>, <strong>y</strong>, <strong>z</strong> (<em>array</em>) – Distribution of Levy flight particles. <strong>z</strong> is only outputted if this is a 3D distribution.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
-<dt id="get_adjusted_levy_flight">
-<code class="sig-name descname">get_adjusted_levy_flight</code><span class="sig-paren">(</span><em class="sig-param">size</em><span class="optional">[</span>, <em class="sig-param">mode='3D'</em>, <em class="sig-param">periodic=True</em>, <em class="sig-param">box_size=75.</em>, <em class="sig-param">t_0=0.325</em>, <em class="sig-param">t_s=0.015</em>, <em class="sig-param">alpha=1.5</em>, <em class="sig-param">beta=0.45</em>, <em class="sig-param">gamma=1.3</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#get_adjusted_levy_flight" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="get_adjusted_levy_flight">
+<span class="sig-name descname"><span class="pre">get_adjusted_levy_flight</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">mode='3D'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">periodic=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">box_size=75.</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_0=0.325</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_s=0.015</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha=1.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta=0.45</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma=1.3</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#get_adjusted_levy_flight" title="Link to this definition"></a></dt>
 <dd><p>Generates a random realisation of an adjusted Levy flight (ALF) distribution.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>size</strong> (<em>int</em>) – Number of points.</p></li>
 <li><p><strong>mode</strong> (<em>str</em>) – ‘2D’ or ‘3D’ – Defines whether the distribution is defined in 2D or 3D cartesian coordinates.</p></li>
@@ -559,69 +492,44 @@ are defined by the user.</p>
 <li><p><strong>gamma</strong> (<em>float</em>) – ALF parameter, the gradient for the slow rise of the ALF’s cumulative distribution function.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>x</strong>, <strong>y</strong>, <strong>z</strong> (<em>array</em>) – Distribution of adjusted Levy flight particles. <strong>z</strong> is only outputted if this is a 3D distribution.</p>
 </dd>
 </dl>
 </dd></dl>
 
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="minimum_spanning_tree.html" class="btn btn-neutral float-right" title="Minimum Spanning Tree" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="index.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="minimum_spanning_tree.html" class="btn btn-neutral float-right" title="Minimum Spanning Tree" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        
-        &copy; Copyright 2019, Krishna Naidoo
-
-    </p>
+    <p>&#169; Copyright 2019, Krishna Naidoo.</p>
   </div>
-    
-    
-    
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
-    
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
-
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

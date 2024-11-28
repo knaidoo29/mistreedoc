@@ -1,90 +1,48 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>scale_cut &mdash;   documentation</title>
-  
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
 
   
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-
-  
-  
-  
-  
-
-  
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="stats" href="mst_stats.html" />
     <link rel="prev" title="graph" href="mst_graph.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
           
-            <a href="index.html">
           
-
-          
+          <a href="index.html">
             
-            <img src="_static/mistree_logo_extra.png" class="logo" alt="Logo"/>
-          
+              <img src="_static/mistree_logo_extra.png" class="logo" alt="Logo"/>
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="levy_flight.html">Lévy Flight</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="minimum_spanning_tree.html">Minimum Spanning Tree</a><ul class="current">
@@ -99,7 +57,11 @@
 <li class="toctree-l3"><a class="reference internal" href="mst_construct.html">construct</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mst_density.html">density</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mst_graph.html">graph</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">scale_cut</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">scale_cut</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#graph_scale_cut"><code class="docutils literal notranslate"><span class="pre">graph_scale_cut()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#k_nearest_neighbour_scale_cut"><code class="docutils literal notranslate"><span class="pre">k_nearest_neighbour_scale_cut()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="mst_stats.html">stats</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mst_tomo.html">tomo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="plot_hist.html">plotting</a></li>
@@ -109,86 +71,46 @@
 </li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html"></a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-        
-          <li><a href="minimum_spanning_tree.html">Minimum Spanning Tree</a> &raquo;</li>
-        
-      <li>scale_cut</li>
-    
-    
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="minimum_spanning_tree.html">Minimum Spanning Tree</a></li>
+      <li class="breadcrumb-item active">scale_cut</li>
       <li class="wy-breadcrumbs-aside">
-        
-            
             <a href="_sources/mst_scale_cut.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="scale-cut">
-<h1>scale_cut<a class="headerlink" href="#scale-cut" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="scale-cut">
+<h1>scale_cut<a class="headerlink" href="#scale-cut" title="Link to this heading"></a></h1>
 <dl class="py function">
-<dt id="graph_scale_cut">
-<code class="sig-name descname">graph_scale_cut</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">graph</span></em>, <em class="sig-param"><span class="n">scale_cut_length</span></em>, <em class="sig-param"><span class="n">num_nodes</span></em><span class="sig-paren">)</span><a class="headerlink" href="#graph_scale_cut" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="graph_scale_cut">
+<span class="sig-name descname"><span class="pre">graph_scale_cut</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale_cut_length</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_nodes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#graph_scale_cut" title="Link to this definition"></a></dt>
 <dd><p>Will remove all edges in the graph below the <code class="docutils literal notranslate"><span class="pre">scale_cut_length</span></code>.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>graph</strong> (<em>csr_matrix</em>) – A sparse matrix of the edges in a graph and corresponding node indexes.</p></li>
 <li><p><strong>scale_cut_length</strong> (<em>float</em>) – A minimum length scale.</p></li>
 <li><p><strong>num_nodes</strong> (<em>int</em>) – Number of nodes.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><p>Returns a tuple of the following:</p>
 <ul class="simple">
 <li><p><strong>graph_cut</strong> <em>(csr_matrix)</em> – The original graph with distances below the scale_cut_length removed.</p></li>
@@ -201,11 +123,11 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="k_nearest_neighbour_scale_cut">
-<code class="sig-name descname">k_nearest_neighbour_scale_cut</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">y</em>, <em class="sig-param">scale_cut_length</em>, <em class="sig-param">k_neighbours</em><span class="optional">[</span>, <em class="sig-param">z=None</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#k_nearest_neighbour_scale_cut" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="k_nearest_neighbour_scale_cut">
+<span class="sig-name descname"><span class="pre">k_nearest_neighbour_scale_cut</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale_cut_length</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k_neighbours</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">z=None</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#k_nearest_neighbour_scale_cut" title="Link to this definition"></a></dt>
 <dd><p>Iteratively removes edges below the scale_cut_length of a k_nearest_neighbour graph.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>x</strong> (<em>array</em>) – Cartesian coordinates.</p></li>
 <li><p><strong>y</strong> (<em>array</em>) – Cartesian coordinates.</p></li>
@@ -214,7 +136,7 @@
 <li><p><strong>k_neighbours</strong> (<em>int</em>) – The number of nearest neighbours to consider when creating the k-nearest neighbour graph.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><p>Returns a tuple of the following:</p>
 <ul class="simple">
 <li><p><strong>x, y(, z)</strong> <em>(array)</em> – The 2D (3D) coordinates of the positions of the nodes.</p></li>
@@ -225,62 +147,37 @@
 </dl>
 </dd></dl>
 
-</div>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="mst_stats.html" class="btn btn-neutral float-right" title="stats" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="mst_graph.html" class="btn btn-neutral float-left" title="graph" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="mst_graph.html" class="btn btn-neutral float-left" title="graph" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mst_stats.html" class="btn btn-neutral float-right" title="stats" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        
-        &copy; Copyright 2019, Krishna Naidoo
-
-    </p>
+    <p>&#169; Copyright 2019, Krishna Naidoo.</p>
   </div>
-    
-    
-    
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
-    
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
-
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

@@ -2,7 +2,7 @@
 +---------------+-----------------------------------------+
 | Author        | Krishna Naidoo                          |
 +---------------+-----------------------------------------+
-| Version       | 1.2.0                                   |
+| Version       | 2.0.0                                   |
 +---------------+-----------------------------------------+
 | Homepage      | https://github.com/knaidoo29/mistree    |
 +---------------+-----------------------------------------+
@@ -13,22 +13,30 @@
 
         <br>
 
-.. image:: https://travis-ci.org/knaidoo29/mistree.svg?branch=master
-    :target: https://travis-ci.org/knaidoo29/mistree
-.. image:: https://codecov.io/gh/knaidoo29/mistree/branch/master/graph/badge.svg
-    :target: https://codecov.io/gh/knaidoo29/mistree
+.. image:: https://img.shields.io/badge/Version-2.0.0-green
+    :target: https://img.shields.io/badge/Version-2.0.0-green
 .. image:: https://badge.fury.io/py/mistree.svg
     :target: https://badge.fury.io/py/mistree
-.. image:: https://joss.theoj.org/papers/461d79e9e5faf21029c0a7b1c928be28/status.svg
-    :target: https://joss.theoj.org/papers/461d79e9e5faf21029c0a7b1c928be28
-.. image:: https://zenodo.org/badge/170473458.svg
-    :target: https://zenodo.org/badge/latestdoi/170473458
+.. image:: https://img.shields.io/badge/Python-3.7%20|%203.8%20|%203.9%20|%203.10%20|%203.11-blue
+    :target: https://img.shields.io/badge/Python-3.7%20|%203.8%20|%203.9%20|%203.10%20|%203.11-blue
+.. image:: https://github.com/knaidoo29/mistree/actions/workflows/python-package.yml/badge.svg?
+    :target: https://github.com/knaidoo29/mistree/actions/workflows/python-package.yml
+.. image:: https://github.com/knaidoo29/mistree/actions/workflows/python-package_macos.yml/badge.svg?
+    :target: https://github.com/knaidoo29/mistree/actions/workflows/python-package_macos.yml
+.. image:: https://github.com/knaidoo29/mistree/actions/workflows/python-package_windows.yml/badge.svg?
+    :target: https://github.com/knaidoo29/mistree/actions/workflows/python-package_windows.yml
+.. image:: https://raw.githubusercontent.com/knaidoo29/mistree/refs/heads/master/coverage.svg
+    :target: https://raw.githubusercontent.com/knaidoo29/mistree/refs/heads/master/coverage.svg
 .. image:: https://img.shields.io/badge/License-MIT-blue.svg
     :target: https://opensource.org/licenses/MIT
-.. image:: https://mybinder.org/badge_logo.svg
-    :target: https://mybinder.org/v2/gh/knaidoo29/mistree/master?filepath=tutorials%2Fnotebooks%2F
+.. image:: https://joss.theoj.org/papers/461d79e9e5faf21029c0a7b1c928be28/status.svg
+    :target: https://joss.theoj.org/papers/461d79e9e5faf21029c0a7b1c928be28
 .. image:: https://img.shields.io/badge/ascl-1910.016-blue.svg?colorB=262255
     :target: http://ascl.net/1910.016
+.. image:: https://zenodo.org/badge/170473458.svg
+    :target: https://zenodo.org/badge/latestdoi/170473458
+.. image:: https://mybinder.org/badge_logo.svg
+    :target: https://mybinder.org/v2/gh/knaidoo29/mistree/master?filepath=tutorials%2Fnotebooks%2F
 
 |br|
 
@@ -40,13 +48,13 @@ The Minimum Spanning Tree (MST) has been used in a broad range of scientific res
 Dependencies
 ------------
 
-MiSTree will work on Python 2.7 or 3.4+ and requires the following Python modules:
+MiSTree will work on Python >= 3.7 and requires the following Python modules:
 
 * `numpy <http://www.numpy.org/>`_
+* `numba <https://numba.pydata.org/>`_
 * `matplotlib <https://matplotlib.org>`_
 * `scipy <https://scipy.org/>`_
 * `scikit-learn <http://scikit-learn.org/stable/>`_
-* `f2py <https://docs.scipy.org/doc/numpy/f2py/>`_ (should be installed with numpy)
 
 For testing you will require `nose <https://nose.readthedocs.io/en/latest/>`_ or `pytest <http://pytest.org/en/latest/>`_ .
 
@@ -156,3 +164,7 @@ Version History
 **Version 1.2**:
 
     * Added automated testing routines which can be executed using `nose` or `pytest`.
+
+**Version 2.0**
+
+    * Completely rewritten fortran subroutines in numba for easier installation without compromise in speed.
